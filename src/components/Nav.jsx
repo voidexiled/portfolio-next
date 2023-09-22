@@ -29,7 +29,7 @@ export default function Nav() {
 
   return (
     <motion.header className="flex flex-col h-[48px] min-h-[48px] max-h-[400px] justify-between items-center font-nunito-sans text-lg md:text-lg md:tracking-[2px] non-selectable ">
-      <motion.div className="flex flex-row w-full h-12 justify-between items-center bg-background p-6 md:px-8 md:py-9">
+      <motion.div className="flex flex-row w-full h-12 justify-between items-center bg-background p-4 lg:px-8 md:py-9">
         <motion.div>
           <Link href={"/"}>
             <motion.h1 className="hover:text-primary-400 transition-all">
