@@ -35,6 +35,8 @@ export default function Projects() {
                 title={project.title}
                 img={project.img}
                 body={project.body}
+                shortBody={project.shortBody}
+                technologies={project.technologies}
                 href={"projects/" + project.id}
               />
             );

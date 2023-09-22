@@ -29,21 +29,30 @@ export default function Home() {
     <AnimatePresence>
       <motion.div
         key="home"
-        className="wrapper w-full h-full flex justify-center items-center align-middle"
+        className="wrapper w-full h-full flex flex-col md:flex-row justify-center items-center align-middle "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <motion.div className="container flex flex-col text-center">
-          <motion.span className="title leading-snug text-4xl lg:text-6xl text-left">
+        <motion.div className="container flex flex-col  h-[140px] items-center ">
+          <span className="title leading-snug text-4xl lg:text-6xl text-left">
             Hey, {"i'm"} Jesus Jalomo
-          </motion.span>
-          <motion.div className="subtitle text-primary leading-snug text-lg lg:text-xl text-left">
-            <motion.span
+          </span>
+          <div className="subtitle text-primary leading-snug text-lg lg:text-xl text-left">
+            <span
               id="typewriter"
               className="subtitle text-light leading-snug break-words"
-            ></motion.span>
-          </motion.div>
+            ></span>
+          </div>
+        </motion.div>
+        <motion.div className=" h-[160]px  overflow-hidden p-6 border-primary-400 ">
+          <motion.img
+            initial={{ x: 500, scale: 0.7, opacity: 0 }}
+            animate={{ x: 0, scale: 1, opacity: 1 }}
+            src="/pp.jpeg"
+            className="rounded-[50%] border-2  "
+            viewport={{ once: true }}
+          ></motion.img>
         </motion.div>
       </motion.div>
     </AnimatePresence>

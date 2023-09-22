@@ -2,27 +2,41 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-export default function ProjectCard({ id, img, title, body, href }) {
+import { techs } from "../data/projects";
+import Technologies from "./Technologies";
+
+export default function ProjectCard({
+  id,
+  img,
+  title,
+  body,
+  technologies,
+  shortBody,
+  href,
+}) {
   return (
     <>
       <motion.div
-        className="w-3/4 lg:w-2/6 h-[480px] md:h-[600px] md: bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border box-content group"
+        className="w-3/4 lg:w-3/12 h-[480px] md:h-[580px] md: bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border box-content group"
         transition={{ delay: 0.1 * id }}
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0, x: 1200 }}
+        animate={{ x: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        exit={{ opacity: 0 }}
+        exit={{
+          opacity: 0,
+        }}
       >
-        <motion.div className="w-full h-[240px] md:h-[300px] overflow-hidden transition-all object-cover object-center">
+        <motion.div className="w-full h-[240px] md:h-[290px] overflow-hidden transition-all object-cover object-center">
           <motion.img
             src={img}
-            width={1200}
-            height={720}
+            width={600}
+            height={320}
             alt={title + " preview image"}
             className="rounded-t-lg transition-all w-full object-center h-[300px] object-cover"
           />
         </motion.div>
-        <div className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[240px] md:h-[300px] pb-4">
+        <div className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[240px] md:h-[290px] pb-4">
           <motion.span
             className="text-2xl lg:text-2xl font-medium leading-normal"
             transition={{ delay: 0.1 * id + 0.01 }}
@@ -37,7 +51,7 @@ export default function ProjectCard({ id, img, title, body, href }) {
             {title}
           </motion.span>
           <motion.p
-            className="text-light text-base leading-normal opacity-70 h-36 max-h-36 max-sm:max-h-32 max-sm:h-32 overflow-hidden"
+            className="text-light text-base leading-normal opacity-70  overflow-hidden"
             transition={{ delay: 0.1 * id + 0.02 }}
             initial={{
               y: 30,
@@ -47,8 +61,11 @@ export default function ProjectCard({ id, img, title, body, href }) {
             }}
             viewport={{ once: true }}
           >
-            {body}
+            {shortBody}
           </motion.p>
+          <motion.div className="gap-x-1">
+            <Technologies techsGroup={technologies} name={title} />
+          </motion.div>
           <motion.span
             className="relative text-secondary-300 pb-4 lg:bottom-0"
             transition={{ delay: 0.1 * id }}

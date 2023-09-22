@@ -5,7 +5,7 @@ export const getProjects = () => {
 };
 
 export const getProjectById = (id) => {
-  return projects.find((project) => project.id === id);
+  return projects.find((project) => Number(project.id) === Number(id));
 };
 
 export const getProjectsIds = () => {
