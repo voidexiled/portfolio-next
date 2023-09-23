@@ -38,7 +38,7 @@ export default function Project() {
   return (
     <AnimatePresence>
       <motion.div
-        className="w-3/4 h-fit bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border-opacity-20 border box-content group justify-center mx-auto mt-20 pb-6"
+        className="w-3/4 h-fit bg-slate-800 bg-opacity-90 rounded-lg  box-content group justify-center mx-auto mt-20 pb-6"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0 }}
@@ -57,7 +57,7 @@ export default function Project() {
         />
         <div className="flex flex-col items-center justify-center">
           {project && (
-            <div className="relative rounded transition-all w-12/12 lg:w-12/12 border border-gray-700 border-opacity-20 md:h-[650px]  overflow-hidden ">
+            <div className="relative rounded transition-all w-12/12 lg:w-12/12  md:h-[650px]  overflow-hidden ">
               <motion.img
                 src={project.img}
                 alt={project.title + " preview image"}
