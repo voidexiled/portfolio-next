@@ -43,6 +43,8 @@ export default function HeroSection() {
         </motion.h1>
         <motion.div className="imgContainer max-h-[320px] max-w-[400px] lg:max-h-[340px] lg:max-w-[415px] rounded-3xl overflow-hidden ">
           <motion.img
+            initial={{ scale: 0.4, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             src={"/stock-photo.svg"}
             title="dev illustration"
             alt="dev illustration"

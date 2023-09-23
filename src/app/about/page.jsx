@@ -19,10 +19,10 @@ export default function About() {
     <>
       <AnimatePresence>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className={` wrapper pt-[45px] pb-[85px] lg:py-[100px] h-full min-w-[120px] max-w-[1500px] my-auto mx-auto flex flex-col justify-start items-stretch leading-relaxed ${nunito_sans.className}`}
+          initial={{ opacity: 0, x: 150 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -150 }}
+          className={`non-selectable wrapper pt-[45px] pb-[85px] lg:py-[100px] h-full min-w-[120px] max-w-[1500px] my-auto mx-auto flex flex-col justify-start items-stretch leading-relaxed ${nunito_sans.className}`}
         >
           <HeroSection></HeroSection>
           <SkillsSection></SkillsSection>
