@@ -4,17 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
 
+
+
 ::-webkit-scrollbar {
     width: 8px;
+    background: #023c40ff;
+
+    
 }
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: #023c40ff;
     
 }
 ::-webkit-scrollbar-button {
-    background: transparent;
+    background: none;
     height: 8px;
     width: 8px;
 }
@@ -31,10 +36,13 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #da7a83ff;
+    
 }
 html {
   font-family: system-ui, sans-serif;
+ 
   scrollbar-gutter: stable;
+
 }
 code {
   font-family:
@@ -48,6 +56,12 @@ code {
     monospace;
 }
 
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: scroll;
+}
 
 .non-selectable {
   -webkit-touch-callout: none; /* iOS Safari */

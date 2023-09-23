@@ -38,7 +38,7 @@ export default function Nav() {
       <motion.nav
         className={`relative flex flex-col h-[48px] min-h-[48px] max-h-[400px] justify-between items-center text-lg md:text-[22px]  non-selectable mx-auto ${nunito_sans.className}`}
       >
-        <motion.div className="flex flex-row w-full h-12 justify-between items-center bg-background p-4 lg:px-8 md:py-9">
+        <motion.div className="flex flex-row w-full h-12 justify-between items-center  p-4 lg:px-8 md:py-9">
           <motion.div>
             <Link href={"/"}>
               <motion.h1

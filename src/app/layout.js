@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body
         className={
           inter.className +
-          " bg-background h-screen w-full text-light text-xs md:text-md lg:text-lg relative grid lg:px-8 max-w-[100%] overflow-x-hidden scroll-smooth"
+          "bg-no-repeat  bg-gradient-to-tr from-background-700 via-background-800 to-background-900 h-screen w-full text-light text-xs md:text-md lg:text-lg relative grid lg:px-8 max-w-[100%] overflow-x-hidden "
         }
       >
         <Nav></Nav>
