@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       gridTemplateRows: {
         cardsm: "50px 1fr 35px 25px",
-        cardmd: "80px 1fr 45px 35px",
+        cardmd: "70px 1fr 45px 35px",
       },
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],
