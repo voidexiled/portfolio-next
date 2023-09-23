@@ -21,12 +21,9 @@ export default function Projects() {
         exit={{ opacity: 0 }}
       >
         <motion.div
-          key="projects"
-          className={
-            "flex text-6xl w-full align-middle justify-center item-center py-14 max-md:py-10 font-roboto "
-          }
-        ></motion.div>
-        <motion.div className="flex flex-row flex-wrap justify-center items-center align-middle gap-6 lg:gap-12 w-full lg:px-3.5">
+          key={"projects"}
+          className="flex flex-row flex-wrap justify-center items-center align-middle gap-6 lg:gap-12 w-full lg:px-3.5 py-16 lg:py-[9rem]"
+        >
           {projects.map((project) => {
             return (
               <ProjectCard

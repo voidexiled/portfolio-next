@@ -4,7 +4,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { techs } from "../data/projects";
 import Technologies from "./Technologies";
-
+import { Nunito_Sans } from "next/font/google";
+const nunito_sans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+});
 export default function ProjectCard({
   id,
   img,
@@ -17,7 +21,7 @@ export default function ProjectCard({
   return (
     <>
       <motion.div
-        className="w-3/4 lg:w-3/12 h-[480px] md:h-[580px] md: bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border box-content group"
+        className={`${nunito_sans.className} w-3/4 lg:w-3/12 h-[480px] md:h-[580px] md: bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border box-content group`}
         transition={{ delay: 0.1 * id }}
         initial={{ opacity: 0, x: 1200 }}
         animate={{ x: 0 }}
@@ -38,7 +42,7 @@ export default function ProjectCard({
         </motion.div>
         <div className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[240px] md:h-[290px] pb-4">
           <motion.span
-            className="text-2xl lg:text-2xl font-medium leading-normal"
+            className="text-2xl xl:text-3xl font-medium leading-normal"
             transition={{ delay: 0.1 * id + 0.01 }}
             initial={{
               y: 20,
@@ -51,7 +55,7 @@ export default function ProjectCard({
             {title}
           </motion.span>
           <motion.p
-            className="text-light text-base leading-normal opacity-70  overflow-hidden"
+            className="text-light text-[20px] leading-normal opacity-70  overflow-hidden"
             transition={{ delay: 0.1 * id + 0.02 }}
             initial={{
               y: 30,
@@ -81,7 +85,7 @@ export default function ProjectCard({
           >
             <Link
               href={href}
-              className="transition-colors text-base hover:text-secondary-500 group "
+              className="transition-colors text-base text-[18px] hover:text-secondary-500 group "
             >
               Read more &#10095;
             </Link>
