@@ -10,7 +10,7 @@ export default function Home() {
       strings: [
         "I'm a computer systems engineering student.",
         "I'm 20 yo",
-        "I'm currently learning MongoDB, Express, React, NodeJs, Framer-motion and Tailwind.",
+        "I'm currently learning MongoDB, Express, React, NodeJs, Framer-motion, Tailwind & Figma.",
       ],
       typeSpeed: 50,
       backSpeed: 25,
