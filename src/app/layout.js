@@ -14,6 +14,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Francisco Jesus Jalomo Chavez - Full stack web developer</title>
+        <meta charSet="utf-8" />
+        <meta
+          name="title"
+          content="Francisco Jesus Jalomo Chavez - Full stack web developer"
+        />
+        <meta name="description" content="Portfolio" />
+
+        <meta
+          name="keywords"
+          content="Francisco Jesus Jalomo Chavez, Francisco Jalomo, Francisco Jalomo Chavez, Francisco Jalomo Chávez, Francisco Jalomo C, Francisco Jalomo C., Francisco Ja"
+        />
+        <meta name="author" content="Francisco Jesus Jalomo Chavez" />
+        <meta name="robots" content="all" />
+      </head>
       <body
         className={
           inter.className +
