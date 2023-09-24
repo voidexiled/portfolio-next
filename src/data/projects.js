@@ -18,7 +18,7 @@ export const techs = {
 export const projects = [
   {
     id: 1,
-    img: "/1.png",
+    img: "/1.webp",
     title: "Pokedex",
     shortBody:
       "Clon de Pokedex con API propia que presenta un diseño creativo.",
@@ -36,7 +36,7 @@ export const projects = [
   },
   {
     id: 2,
-    img: "/2.png",
+    img: "/2.webp",
     title: "Galpermex",
     shortBody:
       "Sitio web desarrollado para Galpermex, empresa de logística y transporte de contenedores.",
@@ -56,7 +56,7 @@ export const projects = [
   },
   {
     id: 3,
-    img: "/3.png",
+    img: "/3.webp",
     title: "Spotify",
     shortBody: "Futuro clon de Spotify desarrollado con tecnologías modernas.",
     body: "Este proyecto representa mi próximo desafío: crear un clon funcional de Spotify utilizando NextJs, React, Tailwind y Framer Motion. Donde planeo agregar sus funcionalidades basicas como canciones, playlist y 'Mi biblioteca'",
@@ -74,7 +74,7 @@ export const projects = [
   },
   {
     id: 4,
-    img: "/4.png",
+    img: "/4.webp",
     title: "Portfolio",
     shortBody:
       "Mi portafolio web, testimonio de mis habilidades de desarrollo.",

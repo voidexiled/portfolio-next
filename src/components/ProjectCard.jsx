@@ -32,10 +32,11 @@ export default function ProjectCard({
         }}
       >
         <motion.div className="w-full h-[240px] md:h-[290px] overflow-hidden transition-all object-cover object-center">
-          <motion.img
+          <Image
             src={img}
             width={600}
             height={320}
+            quality={45}
             alt={title + " preview image"}
             className="rounded-t-lg transition-all w-full object-center h-[300px] object-cover"
           />

@@ -49,7 +49,7 @@ export default function Home() {
           <motion.img
             initial={{ x: 300, scale: 0.7, opacity: 0 }}
             animate={{ x: 0, scale: 1, opacity: 1 }}
-            src="/pp.jpeg"
+            src="/pp.webp"
             className="rounded-[50%] border-2 "
             viewport={{ once: true }}
           ></motion.img>
