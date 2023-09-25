@@ -34,6 +34,7 @@ export default function Footer() {
       className={`${nunito_sans.className} flex flex-col gap-y-2 lg:gap-y-0 lg:flex-row justify-between items-center text-center opacity-80 mt-auto py-4 font-nunito-sans text-[18px] xl:text-[20px] p-4 lg:px-8`}
     >
       <motion.ul className="flex flex-row gap-x-6 justify-between items-center lg:opacity-0">
+        <motion.li className="hidden lg:flex">Contact me at:</motion.li>
         <motion.li>
           <a href="https://github.com/voidexiled" title="Github link">
             <motion.img

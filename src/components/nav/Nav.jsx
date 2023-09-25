@@ -23,7 +23,7 @@ const dirs = {
 
 export default function Nav() {
   const [selected, setSelected] = useState(0);
-  const selectedColorText = "text-terciary-400";
+  const selectedColorText = "text-secondary";
   const notSelectedColorText = "text-light";
   useEffect(() => {
     const input = window.location.pathname;
@@ -40,7 +40,7 @@ export default function Nav() {
           <motion.div>
             <Link href={"/"}>
               <motion.h1
-                className="hover:text-terciary transition-all"
+                className="hover:text-secondary-400 transition-all"
                 onClick={() => {
                   setSelected(DIRS.HOME);
                 }}
@@ -52,7 +52,7 @@ export default function Nav() {
           <motion.div className="flex">
             <motion.ul className="flex flex-row space-x-4  md:space-x-8  ">
               <motion.li
-                className={`relative hover:text-terciary transition-all ${
+                className={`relative hover:text-secondary-400 transition-all ${
                   selected == DIRS.HOME
                     ? selectedColorText
                     : notSelectedColorText
@@ -76,7 +76,7 @@ export default function Nav() {
               </motion.li>
 
               <motion.li
-                className={`relative hover:text-terciary transition-all ${
+                className={`relative hover:text-secondary-400 transition-all ${
                   selected == DIRS.PROJECTS
                     ? selectedColorText
                     : notSelectedColorText
@@ -99,7 +99,7 @@ export default function Nav() {
                 ) : null}
               </motion.li>
               <motion.li
-                className={`relative hover:text-terciary transition-all ${
+                className={`relative hover:text-secondary-400 transition-all ${
                   selected == DIRS.ABOUT
                     ? selectedColorText
                     : notSelectedColorText

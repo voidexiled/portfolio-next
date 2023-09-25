@@ -20,7 +20,7 @@ export default function ProjectCard({
 }) {
   return (
     <>
-      <motion.div
+      <motion.article
         className={`${nunito_sans.className} w-3/4 lg:w-3/12 h-[480px] md:h-[580px] md: bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border box-content group`}
         transition={{ delay: 0.05 * id }}
         initial={{ opacity: 0, x: 250 }}
@@ -41,8 +41,8 @@ export default function ProjectCard({
             className="rounded-t-lg transition-all w-full object-center h-[300px] object-cover"
           />
         </motion.div>
-        <div className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[240px] md:h-[290px] pb-4">
-          <motion.span
+        <motion.main className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[240px] md:h-[290px] pb-4">
+          <motion.h1
             className="text-2xl xl:text-3xl font-medium leading-normal"
             transition={{ delay: 0.1 * id + 0.01 }}
             initial={{
@@ -54,7 +54,7 @@ export default function ProjectCard({
             viewport={{ once: true }}
           >
             {title}
-          </motion.span>
+          </motion.h1>
           <motion.p
             className="text-light text-[20px] leading-normal opacity-70  overflow-hidden"
             transition={{ delay: 0.1 * id + 0.02 }}
@@ -68,10 +68,10 @@ export default function ProjectCard({
           >
             {shortBody}
           </motion.p>
-          <motion.div className="gap-x-1">
+          <motion.section className="gap-x-1">
             <Technologies techsGroup={technologies} name={title} />
-          </motion.div>
-          <motion.span
+          </motion.section>
+          <motion.footer
             className="relative text-secondary-300 pb-4 lg:bottom-0"
             transition={{ delay: 0.1 * id }}
             initial={{
@@ -90,9 +90,9 @@ export default function ProjectCard({
             >
               Read more &#10095;
             </Link>
-          </motion.span>
-        </div>
-      </motion.div>
+          </motion.footer>
+        </motion.main>
+      </motion.article>
     </>
   );
 }
