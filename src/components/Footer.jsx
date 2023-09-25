@@ -2,10 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Nunito_Sans } from "next/font/google";
-import Linkedin from "./svg/linkedin";
-import Outlook from "./svg/outlook";
-import Gmail from "./svg/gmail";
-import Github from "./svg/github";
+
 const iconDesk = {
   first: {
     scale: 1,
