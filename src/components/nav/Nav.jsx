@@ -14,13 +14,11 @@ const DIRS = {
   HOME: 0,
   PROJECTS: 1,
   ABOUT: 2,
-  CONTACT: 3,
 };
 const dirs = {
   "/": 0,
   "/projects": 1,
   "/about": 2,
-  "/contact": 3,
 };
 
 export default function Nav() {
@@ -117,29 +115,6 @@ export default function Nav() {
                   About
                 </Link>
                 {selected == DIRS.ABOUT ? (
-                  <motion.div
-                    layoutId="underline"
-                    className="absolute top-full left-0 w-full h-[3px] bg-secondary rounded-lg"
-                  />
-                ) : null}
-              </motion.li>
-              <motion.li
-                className={`relative hover:text-terciary transition-all ${
-                  selected == DIRS.CONTACT
-                    ? selectedColorText
-                    : notSelectedColorText
-                }
-                `}
-              >
-                <Link
-                  onClick={() => {
-                    setSelected(DIRS.CONTACT);
-                  }}
-                  href={"/contact"}
-                >
-                  Contact
-                </Link>
-                {selected == DIRS.CONTACT ? (
                   <motion.div
                     layoutId="underline"
                     className="absolute top-full left-0 w-full h-[3px] bg-secondary rounded-lg"

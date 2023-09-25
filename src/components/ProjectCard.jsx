@@ -23,7 +23,7 @@ export default function ProjectCard({
       <motion.div
         className={`${nunito_sans.className} w-3/4 lg:w-3/12 h-[480px] md:h-[580px] md: bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border box-content group`}
         transition={{ delay: 0.05 * id }}
-        initial={{ opacity: 0, x: 300 }}
+        initial={{ opacity: 0, x: 250 }}
         animate={{ x: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

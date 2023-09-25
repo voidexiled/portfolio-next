@@ -35,10 +35,10 @@ export default function Home() {
         exit={{ opacity: 0 }}
       >
         <motion.div className="container flex flex-col h-[140px] items-center">
-          <span className="title leading-snug text-4xl lg:text-6xl text-left">
+          <span className="title leading-snug text-4xl lg:text-6xl xl:text-7xl text-left">
             Hey, {"i'm"} Jesus Jalomo
           </span>
-          <div className="subtitle text-primary leading-snug text-lg lg:text-xl text-left">
+          <div className="subtitle text-primary leading-snug text-lg lg:text-xl xl:text-2xl text-left">
             <span
               id="typewriter"
               className="subtitle text-light leading-snug break-words"
@@ -49,9 +49,12 @@ export default function Home() {
           <motion.img
             initial={{ x: 300, scale: 0.7, opacity: 0 }}
             animate={{ x: 0, scale: 1, opacity: 1 }}
+            transition={{ duration: 0.12 }}
             src="/pp.webp"
             className="rounded-[50%] border-2 "
             viewport={{ once: true }}
+            title="Jesus Jalomo profile picture"
+            alt="Jesus Jalomo profile picture"
           ></motion.img>
         </motion.div>
       </motion.div>
