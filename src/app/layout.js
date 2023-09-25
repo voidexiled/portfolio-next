@@ -3,7 +3,7 @@ import Nav from "../components/nav/Nav";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -38,8 +38,8 @@ export default function RootLayout({ children }) {
       >
         <Nav></Nav>
         <main>{children}</main>
-
         <Footer></Footer>
+        <Analytics />
       </body>
     </html>
   );
