@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Francisco Jesus Jalomo Chavez - Full stack web developer</title>
+        <title>Francisco Jesus Jalomo Chavez Portfolio - Full stack web developer </title>
         <meta charSet="utf-8" />
         <meta
           name="title"
@@ -25,10 +25,11 @@ export default function RootLayout({ children }) {
 
         <meta
           name="keywords"
-          content="Francisco Jesus Jalomo Chavez, Francisco Jalomo, Francisco Jalomo Chavez, Francisco Jalomo Chávez, Francisco Jalomo C, Francisco Jalomo C., Francisco Ja"
+          content="Francisco Jesus Jalomo Chavez, Francisco Jalomo, Francisco Jalomo Chavez, Francisco Jalomo Chávez, Francisco Jalomo C, Francisco Jalomo C., Francisco Ja, Jesus Jalomo, Jalomo Chavez, Chavez Jesus, Francisco, Jesus, Jalomo, Chavez, Portafolio, Desarrollador, web, Developer, Software, Engineer, Student, Estudiante, Github, Git, Javascript, Typescript, React, Tailwind, Next.js, Astro, Vite, Angular"
         />
         <meta name="author" content="Francisco Jesus Jalomo Chavez" />
         <meta name="robots" content="all" />
+        <meta name="canonical" content="https://jesusjalomo.com" />
       </head>
       <body
         className={
