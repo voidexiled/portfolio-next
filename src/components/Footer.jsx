@@ -28,10 +28,9 @@ const nunito_sans = Nunito_Sans({
 export default function Footer() {
   return (
     <motion.footer
-      className={`${nunito_sans.className} flex flex-col gap-y-2 lg:gap-y-0 lg:flex-row justify-between items-center text-center opacity-80 mt-auto py-4 font-nunito-sans text-[18px] xl:text-[20px] p-4 lg:px-8`}
+      className={`${nunito_sans.className} mx-auto  w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] flex flex-col gap-y-2 lg:gap-y-0 xl:flex-row justify-between items-center text-center opacity-80 mt-auto py-4 font-nunito-sans text-[18px] p-4`}
     >
-      <motion.ul className="flex flex-row gap-x-6 justify-between items-center lg:opacity-0">
-        <motion.li className="hidden lg:flex">Contact me at:</motion.li>
+      <motion.ul className="flex flex-row gap-x-6 justify-between items-center xl:opacity-0">
         <motion.li>
           <a href="https://github.com/voidexiled" title="Github link">
             <motion.img
@@ -79,7 +78,7 @@ export default function Footer() {
           </a>
         </motion.li>
       </motion.ul>
-      <motion.span className="text-light text-[18px] xl:text-[20px]">
+      <motion.span className="text-light">
         Designed with ♥ & By{" "}
         <motion.a
           href="http://github.com/voidexiled"
@@ -92,8 +91,7 @@ export default function Footer() {
           Jesus Jalomo
         </motion.a>
       </motion.span>
-      <motion.ul className="hidden lg:visible lg:flex lg:flex-row lg:gap-x-6 lg:justify-between lg:items-center">
-        <motion.li>Contact me at:</motion.li>
+      <motion.ul className="hidden xl:flex xl:visible xl:gap-x-6 xl:justify-between lg:items-center">
         <motion.li>
           <a
             href="https://github.com/voidexiled"

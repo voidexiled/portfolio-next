@@ -1,24 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { techs } from "../data/projects";
-import {
-  IconBrandNextjs,
-  IconBrandReact,
-  IconBrandJavascript,
-  IconBrandCss3,
-  IconBrandTailwind,
-  IconBrandFramerMotion,
-  IconBrandNpm,
-  IconBrandMysql,
-} from "@tabler/icons-react";
-import { IconBrandNodejs } from "@tabler/icons-react";
-import { IconBrandMongodb } from "@tabler/icons-react";
 
 const item = {
-  hidden: { y: 12220, opacity: 0 },
+  hidden: {
+    y: 120,
+    opacity: 0,
+    transition: {
+      duration: 1,
+      type: "spring",
+    },
+  },
   visible: {
     y: 0,
     opacity: 1,
+    transition: {
+      duration: 1,
+      type: "spring",
+    },
   },
 };
 const techAnim = {
@@ -34,137 +33,40 @@ const techAnim = {
     opacity: 1,
 
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
-      duration: 2,
+      delayChildren: 0.08,
+      staggerChildren: 0.05,
+      duration: 0.15,
     },
   },
 };
 
-export default function Technologies({ techsGroup, name }) {
-  const { wIcon, hIcon } = ("w-6", "h-6");
+export default function Technologies({ techsGroup, name, color }) {
+  const { wIcon, hIcon } = { wIcon: "w-6", hIcon: "h-6" };
+
   return (
     <motion.ul
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={techAnim}
-      className="flex gap-x-1"
+      className="flex gap-x-2 flex-wrap gap-y-2"
     >
       {techsGroup &&
         techsGroup.map((tech) => {
-          if (tech == techs.NEXTJS) {
-            return (
-              <motion.li
-                key={tech + "_" + name}
-                initial="hidden"
-                animate="visible"
-                variants={item}
-              >
-                <IconBrandNextjs
-                  width={wIcon}
-                  height={hIcon}
-                  className={`w-8 h-8`}
-                />
-              </motion.li>
-            );
-          }
-          if (tech == techs.REACT) {
-            return (
-              <motion.li
-                key={tech + "_" + name}
-                initial="hidden"
-                animate="visible"
-                variants={item}
-              >
-                <IconBrandReact
-                  width={wIcon}
-                  height={hIcon}
-                  className={`w-8 h-8`}
-                />
-              </motion.li>
-            );
-          }
-          if (tech == techs.TAILWIND) {
-            return (
-              <motion.li
-                key={tech + "_" + name}
-                initial="hidden"
-                animate="visible"
-                variants={item}
-              >
-                <IconBrandTailwind
-                  width={wIcon}
-                  height={hIcon}
-                  className={`w-8 h-8`}
-                />
-              </motion.li>
-            );
-          }
-          if (tech == techs.NODEJS) {
-            return (
-              <motion.li
-                key={tech + "_" + name}
-                initial="hidden"
-                animate="visible"
-                variants={item}
-              >
-                <IconBrandNodejs
-                  width={wIcon}
-                  height={hIcon}
-                  className={`w-8 h-8`}
-                />
-              </motion.li>
-            );
-          }
-          if (tech == techs.MONGODB) {
-            return (
-              <motion.li
-                key={tech + "_" + name}
-                initial="hidden"
-                animate="visible"
-                variants={item}
-              >
-                <IconBrandMongodb
-                  width={wIcon}
-                  height={hIcon}
-                  className={`w-8 h-8`}
-                />
-              </motion.li>
-            );
-          }
-          if (tech == techs.MYSQL) {
-            return (
-              <motion.li
-                key={tech + "_" + name}
-                initial="hidden"
-                animate="visible"
-                variants={item}
-              >
-                <IconBrandMysql
-                  width={wIcon}
-                  height={hIcon}
-                  className={`w-8 h-8`}
-                />
-              </motion.li>
-            );
-          }
-          if (tech == techs.FRAMER_MOTION) {
-            return (
-              <motion.li
-                key={tech + "_" + name}
-                initial="hidden"
-                animate="visible"
-                variants={item}
-              >
-                <IconBrandFramerMotion
-                  width={wIcon}
-                  height={hIcon}
-                  className={`w-8 h-8`}
-                />
-              </motion.li>
-            );
-          }
+          return (
+            <li
+              key={name + "_" + tech}
+              variants={item}
+              style={{
+                borderColor: color + "5A",
+                backgroundColor: color + "2A",
+                boxShadow: `0px 0px 5px 1px ${color}1F`,
+              }}
+              className="border-[0.2px] px-4 py-[1px] h-fit max-h-fit rounded-xl text-[13px] text-light/90 leading-4 xl:py-[2px] xl:px-5"
+            >
+              {tech}
+            </li>
+          );
         })}
     </motion.ul>
   );

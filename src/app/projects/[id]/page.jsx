@@ -58,7 +58,10 @@ export default function Project() {
         <div className="flex flex-col items-center justify-center ">
           {project && (
             <div className="relative rounded transition-all w-12/12 lg:w-12/12  md:max-w-[1500px]  overflow-hidden ">
-              <motion.img
+              <Image
+                width={600}
+                height={400}
+                quality={65}
                 src={project.img}
                 alt={project.title + " preview image"}
                 className="object-cover object-center"

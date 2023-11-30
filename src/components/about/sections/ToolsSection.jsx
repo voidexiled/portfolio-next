@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function ToolsSection() {
   return (
     <motion.section className="skills flex flex-col mt-12 xl:max-w-[1500px]">
-      <motion.h1 className="mx-auto w-full align-middle text-center h-30 md:h-36  text-[26px] xl:text-[30px] py-6 text-secondary font-semibold">
+      <motion.h1 className="mx-auto w-full align-middle text-center h-30 md:h-36  text-[26px]  py-6 text-secondary font-semibold">
         Tools{" "}
         <motion.span className="font-normal text-light">I use</motion.span>
       </motion.h1>

@@ -28,13 +28,12 @@ export default function Nav() {
   useEffect(() => {
     const input = window.location.pathname;
     setSelected(dirs[input]);
-    console.log(selected);
   }, []);
 
   return (
     <motion.header className="">
       <motion.nav
-        className={`relative flex flex-col h-[48px] min-h-[48px] max-h-[400px] justify-between items-center text-lg md:text-[22px]  non-selectable mx-auto ${nunito_sans.className}`}
+        className={`relative flex flex-col h-[48px] min-h-[48px] max-h-[400px] justify-between items-center text-[18px] non-selectable w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] mx-auto ${nunito_sans.className} `}
       >
         <motion.div className="flex flex-row w-full h-12 justify-between items-center  p-4 lg:px-8 md:py-9">
           <motion.div>

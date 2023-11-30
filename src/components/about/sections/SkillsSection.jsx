@@ -6,7 +6,7 @@ import { Skill } from "../standalone/Skill";
 export default function SkillsSection() {
   return (
     <motion.section className="skills flex flex-col mt-12 xl:max-w-[1500px] ">
-      <motion.h1 className="mx-auto w-full align-middle text-center h-30 md:h-36 font-normal text-[26px] xl:text-[30px] py-6 ">
+      <motion.h1 className="mx-auto w-full align-middle text-center h-30 md:h-36 font-normal text-[26px] py-6 ">
         Learned{" "}
         <motion.span className="text-secondary font-semibold ">
           Skillset

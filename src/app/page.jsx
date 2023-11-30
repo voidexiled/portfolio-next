@@ -10,7 +10,7 @@ export default function Home() {
       strings: [
         "I'm a computer systems engineering student.",
         "I'm 20 yo",
-        "I'm currently learning NextJs, Astro, React, NodeJs, Framer-motion, Tailwind, Figma & MongoDB, Express.",
+        "I'm currently learning NextJs14, Astro, Vit, Angular17 & React",
       ],
       typeSpeed: 50,
       backSpeed: 25,
@@ -29,27 +29,28 @@ export default function Home() {
     <AnimatePresence>
       <motion.article
         key="home"
-        className="wrapper w-full h-full flex flex-col xl:flex-row justify-between items-center "
+        className="wrapper mx-auto w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] h-full flex flex-col xl:flex-row justify-center items-center lg:px-10 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        transition={{ duration: 0.18 }}
       >
         <motion.section className="container flex flex-col h-[140px] items-center">
-          <span className="title leading-snug text-4xl lg:text-6xl xl:text-7xl text-left">
+          <span className="title leading-snug text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-left whitespace-nowrap">
             Hey, {"i'm"} Jesus Jalomo
           </span>
-          <div className="subtitle text-primary leading-snug text-lg lg:text-xl xl:text-2xl text-left max-w-[340px] md:max-w-[800px]">
+          <div className="subtitle text-primary leading-snug text-lg lg:text-lg xl:text-xl text-left max-w-[340px] md:max-w-[800px]">
             <span
               id="typewriter"
               className="subtitle  text-light leading-snug break-words "
             ></span>
           </div>
         </motion.section>
-        <motion.section className=" border-primary-400 h-[270px] w-[270px] md:h-[320px] md:w-[320px] lg:min-h-[420px] lg:min-w-[420px]">
+        <motion.section className=" border-primary-400 w-[270px] md:w-[300px] lg:w-[300px] xl:w-[310px] 2xl:w-[350px] 3xl:w-[380px]">
           <motion.img
-            initial={{ x: 300, scale: 0.7, opacity: 0 }}
-            animate={{ x: 0, scale: 1, opacity: 1 }}
-            transition={{ duration: 0.12 }}
+            initial={{ scale: 0.4, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.12, ease: "easeInOut" }}
             src="/pp.webp"
             className="rounded-[50%] border-2 "
             viewport={{ once: true }}

@@ -1,4 +1,5 @@
 export const techs = {
+  VITE: "Vite",
   NEXTJS: "Nextjs",
   REACT: "React",
   FRAMER_MOTION: "Framer Motion",
@@ -23,6 +24,7 @@ export const projects = [
     shortBody:
       "Clon de Pokedex con API propia que presenta un diseño creativo.",
     body: '"Void Pokedex" es un proyecto personalizado que simula la funcionalidad de una Pokedex. Diseñado de forma creativa utilizando Next.js, React y Tailwind, este proyecto incorpora una API propia que enriquece su interactividad y funcionalidad. Herramientas adicionales como NPM y Node.js también fueron instrumentales en su desarrollo. En Void Pokedex, podrás buscar el pokemon que tu quieras por su nombre o número de la Pokedex y podrás obtener sus estadísticas de una forma visualmente atractiva, así como su ubicacion y información adicional.',
+    color: "#dd0000",
     technologies: [
       techs.NEXTJS,
       techs.REACT,
@@ -41,15 +43,13 @@ export const projects = [
     shortBody:
       "Sitio web desarrollado para Galpermex, empresa de logística y transporte de contenedores.",
     body: "Galpermex es un proyecto de desarrollo web que diseñé para presentar una empresa enfocada en logística y transporte. Utilizando NextJs, React, y Tailwind, y incorporando animaciones a través de Framer Motion, este sitio web proporciona una visión completa de la empresa, incluyendo sus servicios y clientes. El proyecto fue desarrollado utilizando PNPM.",
+    color: "#8C4754",
     technologies: [
       techs.NEXTJS,
       techs.REACT,
       techs.TAILWIND,
-      techs.JAVASCRIPT,
       techs.EXPRESS,
-      techs.FRAMER_MOTION,
       techs.NODEJS,
-      techs.MYSQL,
     ],
     repoURL: "https://github.com/voidexiled/galpermex",
     deployedUrl: "https://galpermex.vercel.app/",
@@ -60,13 +60,13 @@ export const projects = [
     title: "Spotify",
     shortBody: "Futuro clon de Spotify desarrollado con tecnologías modernas.",
     body: "Este proyecto representa mi próximo desafío: crear un clon funcional de Spotify utilizando NextJs, React, Tailwind y Framer Motion. Donde planeo agregar sus funcionalidades basicas como canciones, playlist y 'Mi biblioteca'",
+    color: "#34B755",
     technologies: [
       techs.NEXTJS,
       techs.REACT,
       techs.TAILWIND,
       techs.JAVASCRIPT,
       techs.EXPRESS,
-      techs.FRAMER_MOTION,
       techs.NODEJS,
     ],
     repoURL: "https://github.com/voidexiled/spotify",
@@ -79,14 +79,25 @@ export const projects = [
     shortBody:
       "Mi portafolio web, testimonio de mis habilidades de desarrollo.",
     body: "Este es mi propio portafolio, desarrollado con NextJs, React, Tailwind y Framer Motion empleando PNPM. Más allá de solo demostrar las habilidades técnicas, también sirve para mostrar mi enfoque de diseño, manejo de proyectos ",
-    technologies: [
-      techs.NEXTJS,
-      techs.REACT,
-      techs.TAILWIND,
-      techs.FRAMER_MOTION,
-      techs.NODEJS,
-    ],
+    color: "#dddddd",
+    technologies: [techs.NEXTJS, techs.REACT, techs.TAILWIND, techs.NODEJS],
     repoURL: "https://github.com/voidexiled/portfolio-next",
     deployedUrl: "https://jesusjalomo.vercel.app/",
+  },
+  {
+    id: 5,
+    img: "/5.webp",
+    title: "Lottery Utilities",
+    shortBody:
+      "Aplicacion web para la generacion de PDF's con tablas de loteria listas para recortar.",
+    body: "Esta aplicacion web fue desarrollada para facilitar el proceso de generacion de tablas de loteria. Utilizando Vite, React y Tailwind, esta aplicacion web permite generar tablas de loteria con la posiblidad de generar con distintos tipos de personalizaciones. Ademas, esta aplicacion web permite editar individualmente cada una de las tablas generadas y también generar un PDF con todas las tablas de loteria generadas.",
+    color: "#3447B3",
+    technologies: [
+      techs.VITE,
+      techs.REACT,
+      techs.TAILWIND,
+      techs.TYPESCRIPT,
+      techs.NODEJS,
+    ],
   },
 ];

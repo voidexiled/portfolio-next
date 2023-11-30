@@ -5,11 +5,6 @@ import Image from "next/image";
 import { getProjects } from "../../utils/Project";
 import ProjectCard from "../../components/ProjectCard";
 import { AnimatePresence } from "framer-motion";
-import { Sansita } from "next/font/google";
-const sans = Sansita({
-  subsets: ["latin"],
-  weight: ["400", "800", "700", "900"],
-});
 
 export default function Projects() {
   const projects = getProjects();
@@ -19,10 +14,11 @@ export default function Projects() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        transition={{ type: "spring", duration: 0.15 }}
       >
         <motion.div
-          key={"projects"}
-          className="flex flex-row flex-wrap justify-center items-center align-middle gap-6 lg:gap-12 w-full lg:px-3.5 py-16 lg:py-[9rem]"
+          key="projects"
+          className="mx-auto grid place-items-center md:grid-cols-2 2xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] lg:px-3.5 py-16 lg:py-[5rem] 2xl:py-[9rem]"
         >
           {projects.map((project) => {
             return (
@@ -30,6 +26,7 @@ export default function Projects() {
                 key={project.id + project.title}
                 id={project.id}
                 title={project.title}
+                color={project.color}
                 img={project.img}
                 body={project.body}
                 shortBody={project.shortBody}

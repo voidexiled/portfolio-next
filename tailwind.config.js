@@ -7,9 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "320px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1440px",
+        "3xl": "1920px",
+      },
       gridTemplateRows: {
-        cardsm: "50px 1fr 35px 25px",
-        cardmd: "70px 1fr 45px 35px",
+        cardsm: "40px 1fr 1fr",
+        cardmd: "60px 1fr 1fr",
       },
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],

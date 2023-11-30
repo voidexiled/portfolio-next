@@ -13,16 +13,27 @@ export default function ProjectCard({
   id,
   img,
   title,
+  color,
   body,
   technologies,
   shortBody,
   href,
 }) {
   return (
-    <>
+    <Link href={href} className=" relative group">
+      <div className="opacity-0 z-10 justify-center items-center transition-all absolute bottom-0 left-0 w-full group-hover:opacity-100">
+        <span
+          style={{
+            backgroundColor: color + "21",
+          }}
+          className="px-3 rounded-md group-hover:w-full text-[15px]"
+        >
+          Ver
+        </span>
+      </div>
       <motion.article
-        className={`${nunito_sans.className} w-3/4 lg:w-3/12 h-[480px] md:h-[580px] md: bg-slate-800 bg-opacity-90 rounded-lg border-gray-700 border box-content group`}
-        transition={{ delay: 0.05 * id }}
+        className={`${nunito_sans.className} relative w-[330px] md:w-[330px] xl:w-[370px] 2xl:[400px] 3xl:w-[460px] h-[480px] md:h-[500px] 2xl:h-[520px] md: bg-slate-800 bg-opacity-90 rounded-lg  box-content shadow-xl shadow-black/10`}
+        transition={{ delay: 0.02 * id }}
         initial={{ opacity: 0, x: 250 }}
         animate={{ x: 0 }}
         whileInView={{ opacity: 1 }}
@@ -31,24 +42,24 @@ export default function ProjectCard({
           opacity: 0,
         }}
       >
-        <motion.div className="w-full h-[240px] md:h-[290px] overflow-hidden transition-all object-cover object-center">
+        <motion.div className="w-full h-[220px] md:h-[230px] 2xl:h-[240px] overflow-hidden transition-all object-cover object-center">
           <Image
             src={img}
             width={600}
             height={320}
             quality={45}
             alt={title + " preview image"}
-            className="rounded-t-lg transition-all w-full object-center h-[300px] object-cover"
+            className="rounded-t-lg transition-all w-full object-top h-[300px] object-cover"
           />
         </motion.div>
-        <motion.main className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[240px] md:h-[290px] pb-4">
+        <motion.main className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[260px] md:h-[270px] 2xl:h-[280px] pb-4">
           <motion.h1
-            className="text-2xl xl:text-3xl font-medium leading-normal"
-            transition={{ delay: 0.1 * id + 0.01 }}
+            className="text-2xl lg:text-2xl 3xl:text-3xl font-medium leading-normal"
+            transition={{ delay: 0.01 * id + 0.01 }}
             initial={{
               y: 20,
             }}
-            whileInView={{
+            animate={{
               y: 0,
             }}
             viewport={{ once: true }}
@@ -56,27 +67,25 @@ export default function ProjectCard({
             {title}
           </motion.h1>
           <motion.p
-            className="text-light text-[20px] leading-normal opacity-70  overflow-hidden"
-            transition={{ delay: 0.1 * id + 0.02 }}
+            className="text-light text-[16px] 2xl:text-[18px] 3xl:text-[20px] leading-normal opacity-70  overflow-hidden"
+            transition={{ delay: 0.01 * id }}
             initial={{
               y: 30,
             }}
-            whileInView={{
+            animate={{
               y: 0,
             }}
             viewport={{ once: true }}
           >
             {shortBody}
           </motion.p>
-          <motion.section className="gap-x-1">
-            <Technologies techsGroup={technologies} name={title} />
-          </motion.section>
+
           <motion.footer
-            className="relative text-secondary-300 pb-4 lg:bottom-0"
-            transition={{ delay: 0.1 * id }}
+            className="flex items-center"
+            transition={{ delay: 0.01 * id }}
             initial={{
               filter: "blur(2px)",
-              scale: 0.3,
+              scale: 0.95,
             }}
             whileInView={{
               filter: "blur(0px)",
@@ -84,15 +93,14 @@ export default function ProjectCard({
             }}
             viewport={{ once: true }}
           >
-            <Link
-              href={href}
-              className="transition-colors text-base text-[18px] hover:text-secondary-500 group "
-            >
-              Read more &#10095;
-            </Link>
+            <Technologies
+              techsGroup={technologies}
+              color={color}
+              name={title}
+            />
           </motion.footer>
         </motion.main>
       </motion.article>
-    </>
+    </Link>
   );
 }

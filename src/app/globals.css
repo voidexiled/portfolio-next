@@ -79,3 +79,7 @@ body {
   -ms-user-select: text; /* Internet Explorer/Edge */
   user-select: text; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
+
+p {
+  text-wrap: balance;
+}
