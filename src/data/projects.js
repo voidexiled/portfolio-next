@@ -37,22 +37,20 @@ export const projects = [
     deployedUrl: "https://void-pokedex.vercel.app/",
   },
   {
-    id: 2,
+    id: 2,  
     img: "/2.webp",
-    title: "Galpermex",
+    title: "Lottery Utilities",
     shortBody:
-      "Sitio web desarrollado para Galpermex, empresa de logística y transporte de contenedores.",
-    body: "Galpermex es un proyecto de desarrollo web que diseñé para presentar una empresa enfocada en logística y transporte. Utilizando NextJs, React, y Tailwind, y incorporando animaciones a través de Framer Motion, este sitio web proporciona una visión completa de la empresa, incluyendo sus servicios y clientes. El proyecto fue desarrollado utilizando PNPM.",
-    color: "#8C4754",
+      "Aplicacion web para la generacion de PDF's con tablas de loteria listas para recortar.",
+    body: "Esta aplicacion web fue desarrollada para facilitar el proceso de generacion de tablas de loteria. Utilizando Vite, React y Tailwind, esta aplicacion web permite generar tablas de loteria con la posiblidad de generar con distintos tipos de personalizaciones. Ademas, esta aplicacion web permite editar individualmente cada una de las tablas generadas y también generar un PDF con todas las tablas de loteria generadas.",
+    color: "#3447B3",
     technologies: [
-      techs.NEXTJS,
+      techs.VITE,
       techs.REACT,
       techs.TAILWIND,
-      techs.EXPRESS,
+      techs.TYPESCRIPT,
       techs.NODEJS,
     ],
-    repoURL: "https://github.com/voidexiled/galpermex",
-    deployedUrl: "https://galpermex.vercel.app/",
   },
   {
     id: 3,
@@ -83,21 +81,5 @@ export const projects = [
     technologies: [techs.NEXTJS, techs.REACT, techs.TAILWIND, techs.NODEJS],
     repoURL: "https://github.com/voidexiled/portfolio-next",
     deployedUrl: "https://jesusjalomo.vercel.app/",
-  },
-  {
-    id: 5,
-    img: "/5.webp",
-    title: "Lottery Utilities",
-    shortBody:
-      "Aplicacion web para la generacion de PDF's con tablas de loteria listas para recortar.",
-    body: "Esta aplicacion web fue desarrollada para facilitar el proceso de generacion de tablas de loteria. Utilizando Vite, React y Tailwind, esta aplicacion web permite generar tablas de loteria con la posiblidad de generar con distintos tipos de personalizaciones. Ademas, esta aplicacion web permite editar individualmente cada una de las tablas generadas y también generar un PDF con todas las tablas de loteria generadas.",
-    color: "#3447B3",
-    technologies: [
-      techs.VITE,
-      techs.REACT,
-      techs.TAILWIND,
-      techs.TYPESCRIPT,
-      techs.NODEJS,
-    ],
   },
 ];
