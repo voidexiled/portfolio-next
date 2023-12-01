@@ -32,7 +32,7 @@ export default function ProjectCard({
         </span>
       </div>
       <motion.article
-        className={`${nunito_sans.className} relative w-[330px] md:w-[330px] xl:w-[370px] 2xl:[400px] 3xl:w-[460px] h-[480px] md:h-[500px] 2xl:h-[520px] md: bg-slate-800 bg-opacity-90 rounded-lg  box-content shadow-xl shadow-black/10`}
+        className={`${nunito_sans.className} relative w-[330px] md:w-[330px] xl:w-[370px] 2xl:[400px] 3xl:w-[460px] h-[480px] md:h-[500px] 2xl:h-[520px] md: bg-slate-800 bg-opacity-90 rounded-lg  box-content shadow-xl shadow-black/10 group-hover:bg-slate-800/80 transition-colors`}
         transition={{ delay: 0.02 * id }}
         initial={{ opacity: 0, x: 250 }}
         animate={{ x: 0 }}

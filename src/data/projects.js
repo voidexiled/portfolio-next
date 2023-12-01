@@ -20,11 +20,10 @@ export const projects = [
   {
     id: 1,
     img: "/1.webp",
-    title: "Pokedex",
-    shortBody:
-      "Clon de Pokedex con API propia que presenta un diseño creativo.",
+    title: "Void Pokedex",
+    shortBody: "Clon de Pokedex con API que presenta un diseño creativo.",
     body: '"Void Pokedex" es un proyecto personalizado que simula la funcionalidad de una Pokedex. Diseñado de forma creativa utilizando Next.js, React y Tailwind, este proyecto incorpora una API propia que enriquece su interactividad y funcionalidad. Herramientas adicionales como NPM y Node.js también fueron instrumentales en su desarrollo. En Void Pokedex, podrás buscar el pokemon que tu quieras por su nombre o número de la Pokedex y podrás obtener sus estadísticas de una forma visualmente atractiva, así como su ubicacion y información adicional.',
-    color: "#dd0000",
+    color: "#fcbe1e",
     technologies: [
       techs.NEXTJS,
       techs.REACT,
@@ -33,11 +32,12 @@ export const projects = [
       techs.MONGODB,
       techs.NODEJS,
     ],
+
     repoURL: "https://github.com/voidexiled/pokedex",
     deployedUrl: "https://void-pokedex.vercel.app/",
   },
   {
-    id: 2,  
+    id: 2,
     img: "/2.webp",
     title: "Lottery Utilities",
     shortBody:
@@ -51,6 +51,8 @@ export const projects = [
       techs.TYPESCRIPT,
       techs.NODEJS,
     ],
+    repoURL: "https://github.com/voidexiled/lottery-utilities",
+    deployedUrl: "https://lotteryutilities.vercel.app/",
   },
   {
     id: 3,
@@ -77,7 +79,7 @@ export const projects = [
     shortBody:
       "Mi portafolio web, testimonio de mis habilidades de desarrollo.",
     body: "Este es mi propio portafolio, desarrollado con NextJs, React, Tailwind y Framer Motion empleando PNPM. Más allá de solo demostrar las habilidades técnicas, también sirve para mostrar mi enfoque de diseño, manejo de proyectos ",
-    color: "#dddddd",
+    color: "#2bd3e0",
     technologies: [techs.NEXTJS, techs.REACT, techs.TAILWIND, techs.NODEJS],
     repoURL: "https://github.com/voidexiled/portfolio-next",
     deployedUrl: "https://jesusjalomo.vercel.app/",
