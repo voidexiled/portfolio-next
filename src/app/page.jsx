@@ -9,7 +9,7 @@ export default function Home() {
     const options = {
       strings: [
         "I'm a computer systems engineering student.",
-        "I'm 20 yo",
+        "I'm 21 yo",
         "I'm currently learning NextJs14, Astro, Vit, Angular17 & React",
       ],
       typeSpeed: 50,
