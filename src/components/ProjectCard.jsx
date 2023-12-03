@@ -42,7 +42,7 @@ export default function ProjectCard({
           opacity: 0,
         }}
       >
-        <motion.div className="w-full h-[220px] md:h-[230px] 2xl:h-[240px] overflow-hidden transition-all object-cover object-center">
+        <div className="w-full h-[220px] md:h-[230px] 2xl:h-[240px] overflow-hidden transition-all object-cover object-center">
           <Image
             src={img}
             width={600}
@@ -51,8 +51,8 @@ export default function ProjectCard({
             alt={title + " preview image"}
             className="rounded-t-lg transition-all w-full object-top h-[300px] object-cover"
           />
-        </motion.div>
-        <motion.main className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[260px] md:h-[270px] 2xl:h-[280px] pb-4">
+        </div>
+        <div className="grid grid-rows-cardsm md:grid-rows-cardmd grid-cols-1 text-left px-4 pt-4 h-[260px] md:h-[270px] 2xl:h-[280px] pb-4">
           <motion.h1
             className="text-2xl lg:text-2xl 3xl:text-3xl font-medium leading-normal"
             transition={{ delay: 0.01 * id + 0.01 }}
@@ -99,7 +99,7 @@ export default function ProjectCard({
               name={title}
             />
           </motion.footer>
-        </motion.main>
+        </div>
       </motion.article>
     </Link>
   );

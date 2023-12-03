@@ -27,11 +27,11 @@ const nunito_sans = Nunito_Sans({
 });
 export default function Footer() {
   return (
-    <motion.footer
+    <footer
       className={`${nunito_sans.className} mx-auto  w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] flex flex-col gap-y-2 lg:gap-y-0 xl:flex-row justify-between items-center text-center opacity-80 mt-auto py-4 font-nunito-sans text-[18px] p-4`}
     >
-      <motion.ul className="flex flex-row gap-x-6 justify-between items-center xl:opacity-0">
-        <motion.li>
+      <ul className="flex flex-row gap-x-6 justify-between items-center xl:opacity-0">
+        <li>
           <a href="https://github.com/voidexiled" title="Github link">
             <motion.img
               src="/github.svg"
@@ -43,8 +43,8 @@ export default function Footer() {
               title="Github logo"
             />
           </a>
-        </motion.li>
-        <motion.li>
+        </li>
+        <li>
           <a
             href="https://www.linkedin.com/in/francisco-jesus-jalomo-chavez-01218b243"
             title="Linkedin link"
@@ -59,7 +59,7 @@ export default function Footer() {
               title="Linkedin logo"
             />
           </a>
-        </motion.li>
+        </li>
 
         <motion.li>
           <a
@@ -77,8 +77,8 @@ export default function Footer() {
             />
           </a>
         </motion.li>
-      </motion.ul>
-      <motion.span className="text-light">
+      </ul>
+      <span className="text-light">
         Designed with ♥ & By{" "}
         <motion.a
           href="http://github.com/voidexiled"
@@ -90,9 +90,9 @@ export default function Footer() {
         >
           Jesus Jalomo
         </motion.a>
-      </motion.span>
-      <motion.ul className="hidden xl:flex xl:visible xl:gap-x-6 xl:justify-between lg:items-center">
-        <motion.li>
+      </span>
+      <ul className="hidden xl:flex xl:visible xl:gap-x-6 xl:justify-between lg:items-center">
+        <li>
           <a
             href="https://github.com/voidexiled"
             target="_blank"
@@ -108,8 +108,8 @@ export default function Footer() {
               title="Github logo"
             />
           </a>
-        </motion.li>
-        <motion.li>
+        </li>
+        <li>
           <a
             href="https://www.linkedin.com/in/francisco-jesus-jalomo-chavez-01218b243"
             target="_blank"
@@ -125,8 +125,8 @@ export default function Footer() {
               title="Linkedin logo"
             />
           </a>
-        </motion.li>
-        <motion.li>
+        </li>
+        <li>
           <a
             href="mailto:jalomo.chavez18@outlook.com?subject=PortfolioMessage"
             title="Outlook mail"
@@ -141,8 +141,8 @@ export default function Footer() {
               title="Outlook logo"
             />
           </a>
-        </motion.li>
-      </motion.ul>
-    </motion.footer>
+        </li>
+      </ul>
+    </footer>
   );
 }

@@ -35,7 +35,7 @@ export default function Home() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.18 }}
       >
-        <motion.section className="container flex flex-col h-[140px] items-center">
+        <section className="container flex flex-col h-[140px] items-center">
           <span className="title leading-snug text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-left whitespace-nowrap">
             Hey, {"i'm"} Jesus Jalomo
           </span>
@@ -45,8 +45,8 @@ export default function Home() {
               className="subtitle  text-light leading-snug break-words "
             ></span>
           </div>
-        </motion.section>
-        <motion.section className=" border-primary-400 w-[270px] md:w-[300px] lg:w-[300px] xl:w-[310px] 2xl:w-[350px] 3xl:w-[380px]">
+        </section>
+        <section className=" border-primary-400 w-[270px] md:w-[300px] lg:w-[300px] xl:w-[310px] 2xl:w-[350px] 3xl:w-[380px]">
           <motion.img
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -57,7 +57,7 @@ export default function Home() {
             title="Jesus Jalomo profile picture"
             alt="Jesus Jalomo profile picture"
           ></motion.img>
-        </motion.section>
+        </section>
       </motion.article>
     </AnimatePresence>
   );

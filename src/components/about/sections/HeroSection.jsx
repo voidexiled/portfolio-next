@@ -4,24 +4,22 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <motion.article className="hero flex flex-col xl:flex-row justify-between xl:max-h-[570px] ">
-      <motion.section className="leftSide flex flex-col justify-start w-full xl:w-2/3 h-full p-8 md:p-4 xl:justify-start ">
-        <motion.h1 className="mx-auto w-full align-middle text-center h-24 font-normal text-[24px]  py-6 ">
+    <article className="hero flex flex-col xl:flex-row justify-between xl:max-h-[570px] ">
+      <section className="leftSide flex flex-col justify-start w-full xl:w-2/3 h-full p-8 md:p-4 xl:justify-start ">
+        <h1 className="mx-auto w-full align-middle text-center h-24 font-normal text-[24px]  py-6 ">
           Know Who{" "}
-          <motion.span className="text-secondary font-semibold ">
-            {"I'M"}
-          </motion.span>
-        </motion.h1>
-        <motion.main className="body xl:max-w-[765px] mx-auto flex flex-col gap-y-3 text-[18px]  text-[rgba(255,255,255,0.82)] ">
-          <motion.p>
+          <span className="text-secondary font-semibold ">{"I'M"}</span>
+        </h1>
+        <main className="body xl:max-w-[765px] mx-auto flex flex-col gap-y-3 text-[18px]  text-[rgba(255,255,255,0.82)] ">
+          <p>
             Hi everyone, I am{" "}
-            <motion.span className="text-secondary">
+            <span className="text-secondary">
               Francisco Jesus Jalomo Chavez{" "}
               <span className="text-[rgba(255,255,255,0.82)]">from</span>{" "}
               Tamaulipas, México.
-            </motion.span>
-          </motion.p>
-          <motion.p>
+            </span>
+          </p>
+          <p>
             Hi! {"I'm"} a{" "}
             <span className="text-secondary">
               20-year-old Systems Engineering student
@@ -34,17 +32,15 @@ export default function HeroSection() {
               {" "}
               Excited to keep growing!.
             </span>
-          </motion.p>
-        </motion.main>
-      </motion.section>
-      <motion.section className="rightSide flex flex-col w-full xl:w-1/3 justify-center items-center xl:p-0 ">
-        <motion.h1 className="hidden xl:inline-block mx-auto w-full align-middle text-center h-24 font-normal  py-6 opacity-0  px-4">
+          </p>
+        </main>
+      </section>
+      <section className="rightSide flex flex-col w-full xl:w-1/3 justify-center items-center xl:p-0 ">
+        <h1 className="hidden xl:inline-block mx-auto w-full align-middle text-center h-24 font-normal  py-6 opacity-0  px-4">
           Know Who{" "}
-          <motion.span className="text-secondary font-semibold ">
-            {"I'M"}
-          </motion.span>
-        </motion.h1>
-        <motion.div className="imgContainer max-h-[320px] max-w-[400px] lg:max-h-[340px] lg:max-w-[415px] rounded-3xl overflow-hidden ">
+          <span className="text-secondary font-semibold ">{"I'M"}</span>
+        </h1>
+        <div className="imgContainer max-h-[320px] max-w-[400px] lg:max-h-[340px] lg:max-w-[415px] rounded-3xl overflow-hidden ">
           <motion.img
             initial={{ scale: 0.4, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -53,8 +49,8 @@ export default function HeroSection() {
             alt="dev illustration"
             className="object-cover object-center max-h-[320px] max-w-[400px] lg:max-h-[340px] lg:max-w-[415px]"
           />
-        </motion.div>
-      </motion.section>
-    </motion.article>
+        </div>
+      </section>
+    </article>
   );
 }

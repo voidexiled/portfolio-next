@@ -31,26 +31,26 @@ export default function Nav() {
   }, []);
 
   return (
-    <motion.header className="">
-      <motion.nav
+    <header className="">
+      <nav
         className={`relative flex flex-col h-[48px] min-h-[48px] max-h-[400px] justify-between items-center text-[18px] non-selectable w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] mx-auto ${nunito_sans.className} `}
       >
-        <motion.div className="flex flex-row w-full h-12 justify-between items-center  p-4 lg:px-8 md:py-9">
-          <motion.div>
+        <div className="flex flex-row w-full h-12 justify-between items-center  p-4 lg:px-8 md:py-9">
+          <div>
             <Link href={"/"}>
-              <motion.h1
+              <h1
                 className="hover:text-secondary-400 transition-all"
                 onClick={() => {
                   setSelected(DIRS.HOME);
                 }}
               >
                 Hi 😁
-              </motion.h1>
+              </h1>
             </Link>
-          </motion.div>
-          <motion.div className="flex">
-            <motion.ul className="flex flex-row space-x-4  md:space-x-8  ">
-              <motion.li
+          </div>
+          <div className="flex">
+            <ul className="flex flex-row space-x-4  md:space-x-8  ">
+              <li
                 className={`relative hover:text-secondary-400 transition-all ${
                   selected == DIRS.HOME
                     ? selectedColorText
@@ -67,14 +67,14 @@ export default function Nav() {
                   Home
                 </Link>
                 {selected == DIRS.HOME ? (
-                  <motion.div
+                  <div
                     layoutId="underline"
                     className="absolute top-full left-0 w-full h-[3px] bg-secondary rounded-lg"
                   />
                 ) : null}
-              </motion.li>
+              </li>
 
-              <motion.li
+              <li
                 className={`relative hover:text-secondary-400 transition-all ${
                   selected == DIRS.PROJECTS
                     ? selectedColorText
@@ -91,13 +91,13 @@ export default function Nav() {
                   Projects
                 </Link>
                 {selected == DIRS.PROJECTS ? (
-                  <motion.div
+                  <div
                     layoutId="underline"
                     className="absolute top-full left-0 w-full h-[3px] bg-secondary rounded-lg"
                   />
                 ) : null}
-              </motion.li>
-              <motion.li
+              </li>
+              <li
                 className={`relative hover:text-secondary-400 transition-all ${
                   selected == DIRS.ABOUT
                     ? selectedColorText
@@ -114,16 +114,16 @@ export default function Nav() {
                   About
                 </Link>
                 {selected == DIRS.ABOUT ? (
-                  <motion.div
+                  <div
                     layoutId="underline"
                     className="absolute top-full left-0 w-full h-[3px] bg-secondary rounded-lg"
                   />
                 ) : null}
-              </motion.li>
-            </motion.ul>
-          </motion.div>
-        </motion.div>
-      </motion.nav>
-    </motion.header>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
