@@ -10,7 +10,7 @@ export default function Home() {
       strings: [
         "I'm a computer systems engineering student.",
         "I'm 21 yo",
-        "I'm currently learning NextJs14, Astro, Vit, Angular17 & React",
+        "I'm currently learning NextJs14, Astro, Vit, Angular17 and React",
       ],
       typeSpeed: 50,
       backSpeed: 25,
