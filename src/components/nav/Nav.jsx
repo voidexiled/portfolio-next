@@ -25,10 +25,25 @@ export default function Nav() {
   const [selected, setSelected] = useState(0);
   const selectedColorText = "text-secondary";
   const notSelectedColorText = "text-light";
+
+  const [theme, setTheme] = useState("light");
+
   useEffect(() => {
     const input = window.location.pathname;
     setSelected(dirs[input]);
   }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <motion.header className="">
@@ -42,6 +57,7 @@ export default function Nav() {
                 className="hover:text-secondary-400 transition-all"
                 onClick={() => {
                   setSelected(DIRS.HOME);
+                  //handleThemeSwitch();
                 }}
               >
                 Hi 😁
