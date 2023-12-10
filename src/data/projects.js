@@ -34,6 +34,7 @@ export const projects = [
     ],
 
     repoURL: "https://github.com/voidexiled/pokedex",
+    repo_name: "pokedex",
     deployedUrl: "https://void-pokedex.vercel.app/",
   },
   {
@@ -51,6 +52,7 @@ export const projects = [
       techs.TYPESCRIPT,
       techs.NODEJS,
     ],
+    repo_name: "lottery-utilities",
     repoURL: "https://github.com/voidexiled/lottery-utilities",
     deployedUrl: "https://lotteryutilities.vercel.app/",
   },
@@ -69,7 +71,8 @@ export const projects = [
       techs.EXPRESS,
       techs.NODEJS,
     ],
-    repoURL: "https://github.com/voidexiled/spotify",
+    repo_name: "spotify-clon",
+    repoURL: "https://github.com/voidexiled/spotify-clon",
     deployedUrl: "https://void-spotify.vercel.app/",
   },
   {
@@ -81,6 +84,7 @@ export const projects = [
     body: "Este es mi propio portafolio, desarrollado con NextJs, React, Tailwind y Framer Motion empleando PNPM. Más allá de solo demostrar las habilidades técnicas, también sirve para mostrar mi enfoque de diseño, manejo de proyectos ",
     color: "#2bd3e0",
     technologies: [techs.NEXTJS, techs.REACT, techs.TAILWIND, techs.NODEJS],
+    repo_name: "portfolio-next",
     repoURL: "https://github.com/voidexiled/portfolio-next",
     deployedUrl: "https://jesusjalomo.vercel.app/",
   },
