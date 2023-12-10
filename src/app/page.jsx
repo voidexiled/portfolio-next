@@ -46,18 +46,23 @@ export default function Home() {
             ></span>
           </div>
         </section>
-        <section className=" border-primary-400 w-[270px] md:w-[300px] lg:w-[300px] xl:w-[310px] 2xl:w-[350px] 3xl:w-[380px]">
-          <motion.img
-            initial={{ scale: 0.4, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.12, ease: "easeInOut" }}
+        <motion.section
+          className=" border-primary-400 w-[270px] md:w-[300px] lg:w-[300px] xl:w-[310px] 2xl:w-[350px] 3xl:w-[380px]"
+          initial={{ scale: 0.4, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.12, ease: "easeInOut" }}
+          viewport={{ once: true }}
+        >
+          <Image
+            priority={true}
+            width={800}
+            height={800}
             src="/pp.webp"
-            className="rounded-[50%] border-2 "
-            viewport={{ once: true }}
+            className="rounded-[50%] border-2"
             title="Jesus Jalomo profile picture"
             alt="Jesus Jalomo profile picture"
-          ></motion.img>
-        </section>
+          ></Image>
+        </motion.section>
       </motion.article>
     </AnimatePresence>
   );

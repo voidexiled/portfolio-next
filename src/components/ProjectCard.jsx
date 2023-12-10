@@ -47,7 +47,7 @@ export default function ProjectCard({
             src={img}
             width={600}
             height={320}
-            quality={45}
+            quality={90}
             alt={title + " preview image"}
             className="rounded-t-lg transition-all w-full object-top h-[300px] object-cover"
           />

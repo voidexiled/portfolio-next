@@ -18,7 +18,7 @@ export default function Projects() {
       >
         <div
           key="projects"
-          className="mx-auto grid place-items-center md:grid-cols-2 2xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] lg:px-3.5 py-16 lg:py-[5rem] 2xl:py-[9rem]"
+          className="overflow-hidden mx-auto grid place-items-center md:grid-cols-2 2xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] lg:px-3.5 "
         >
           {projects.map((project) => {
             return (

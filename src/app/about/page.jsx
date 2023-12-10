@@ -19,7 +19,7 @@ export default function About() {
           initial={{ opacity: 0, x: 150 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -150 }}
-          className={`non-selectable wrapper pt-[45px] pb-[85px] lg:py-[100px] w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] my-auto mx-auto flex flex-col justify-start items-stretch leading-relaxed ${nunito_sans.className}`}
+          className={`non-selectable wrapper pt-[45px] pb-[85px] w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] my-auto mx-auto flex flex-col justify-start items-stretch leading-relaxed ${nunito_sans.className}`}
         >
           <HeroSection></HeroSection>
           <SkillsSection></SkillsSection>
