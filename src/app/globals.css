@@ -83,3 +83,28 @@ body {
 p {
   text-wrap: balance;
 }
+
+
+/*
+adding to .navbar background when scroll position is > 100px
+*/
+
+.navbar {
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 120px;
+}
+
+@keyframes enhance-header {
+  from {
+    @apply bg-terciary-800/0;
+      
+      backdrop-filter: blur(0px);
+  }
+  to {
+    @apply bg-terciary-800/80;
+
+    backdrop-filter: blur(4px);
+
+  }
+}
