@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Francisco Jesus Jalomo Chavez Portfolio - Full stack web developer </title>
+        <title>
+          Francisco Jesus Jalomo Chavez Portfolio - Full stack web developer{" "}
+        </title>
         <meta charSet="utf-8" />
         <meta
           name="title"
@@ -34,11 +36,25 @@ export default function RootLayout({ children }) {
       <body
         className={
           inter.className +
-          "before:contents before:-z-10 before:fixed  before:top-0 before:left-0 before:w-screen before:h-screen before:bg-gradient-to-tr before:from-background-700 before:via-background-800 before:to-background-900 before:bg-no-repeat  before:bg-cover h-screen w-full text-light text-xs md:text-md lg:text-lg relative grid lg:px-8 max-w-[100%] overflow-x-hidden "
+          "before:contents before:-z-10 before:fixed  before:top-0 before:left-0 before:w-screen before:min-h-screen before:bg-gradient-to-tr before:from-background-700 before:via-background-800 before:to-background-900 before:bg-no-repeat  before:bg-cover min-h-screen w-full text-light text-xs md:text-md lg:text-lg relative grid max-w-[100%] max-w-screen "
         }
       >
         <Nav></Nav>
-        <main>{children}</main>
+        <main className="py-16 lg:py-[5rem] 2xl:py-[9rem]">
+          <ToastContainer
+            position="bottom-center"
+            autoClose={1500}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
+          {children}
+        </main>
         <Footer></Footer>
         <Analytics />
       </body>
