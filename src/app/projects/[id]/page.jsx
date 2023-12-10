@@ -5,22 +5,54 @@ import { IconCornerUpLeft, IconBrandGithub } from "@tabler/icons-react";
 import { useParams } from "next/navigation";
 import { getProjectById } from "../../../utils/Project";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 import { IconLink } from "@tabler/icons-react";
 import { IconExternalLink } from "@tabler/icons-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getCommitsFromRepository, getRepository } from "@/services/github";
+
 export default function Project() {
   const params = useParams();
   const [project, setProject] = useState(null);
+  const [githubInfo, setGithubInfo] = useState(null);
+  const [commitsInfo, setCommitsInfo] = useState(null);
 
   const id = params.id;
   useEffect(() => {
     const proj = getProjectById(id);
     setProject(proj);
   }, [project, id]);
+
+  useEffect(() => {
+    const getRepo = async () => {
+      const repo = await getRepository(project.repo_name).then((res) => {
+        return res;
+      });
+      setGithubInfo(repo);
+    };
+    if (project) {
+      getRepo();
+    }
+  }, [project]);
+
+  useEffect(() => {
+    const getCommits = async () => {
+      const commits = await getCommitsFromRepository(project.repo_name).then(
+        (res) => {
+          console.warn(res);
+
+          return res;
+        }
+      );
+      setCommitsInfo(commits);
+    };
+    if (project) {
+      getCommits();
+    }
+  }, [project]);
 
   const onClickNotify = (msg) => {
     toast(msg, {
@@ -38,90 +70,47 @@ export default function Project() {
   return (
     <AnimatePresence>
       <motion.div
-        className="w-3/4 md:max-w-[1500px] h-fit bg-slate-800 bg-opacity-90 rounded-lg  box-content group justify-center mx-auto my-20 pb-6"
+        className="relative mx-auto w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1440px] rounded-md grid 3xl:grid-rows-[480px_minmax(600px,_1fr)]  overflow-hidden gap-y-6"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0 }}
       >
-        <ToastContainer
-          position="top-center"
-          autoClose={1500}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss={false}
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-        <div className="flex flex-col items-center justify-center ">
-          {project && (
-            <div className="relative rounded transition-all w-12/12 lg:w-12/12  md:max-w-[1500px]  overflow-hidden ">
-              <Image
-                width={600}
-                height={400}
-                quality={65}
-                src={project.img}
-                alt={project.title + " preview image"}
-                className="object-cover object-center"
-              />
-              <div className="left-2 top-2 lg:left-4 lg:top-4 absolute z-10 w-8 lg:w-10">
-                <span className="">
-                  <Link href="/projects">
-                    <IconCornerUpLeft
-                      width={40}
-                      height={40}
-                      className="transition-all rounded-md hover:bg-primary-300 hover:text-slate-800 hover:bg-opacity-50 hover:shadow-md p-1 lg:p-2  xl:h-[48px] xl:w-[48px]  "
-                    />
-                  </Link>
-                </span>
-              </div>
-              <div className="right-2 top-2 lg:right-4 lg:top-4 absolute z-10 w-8 lg:w-10 flex flex-col gap-y-3">
-                <span>
-                  <a href={project.repoURL} target="_blank">
-                    <IconBrandGithub
-                      height={40}
-                      width={40}
-                      className="transition-all rounded-md hover:bg-primary-300 hover:text-slate-800 hover:shadow-xl p-1 lg:p-2 h-[32px] w-[32px] lg:h-[40px] lg:w-[40px] xl:h-[48px] xl:w-[48px] "
-                    />
-                  </a>
-                </span>
-                <span>
-                  <a href={project.deployedUrl} target="_blank">
-                    <IconExternalLink
-                      height={40}
-                      width={40}
-                      className="transition-all rounded-md hover:bg-primary-300 hover:text-slate-800 hover:shadow-xl p-1 lg:p-2 h-[32px] w-[32px] lg:h-[40px] lg:w-[40px]  xl:h-[48px] xl:w-[48px] "
-                    />
-                  </a>
-                </span>
-                <span
-                  className="cursor-pointer "
-                  onClick={() => {
-                    navigator.clipboard.writeText(project.deployedUrl);
-                    onClickNotify("✔ Copied to clipboard!");
-                  }}
-                >
-                  <IconLink
-                    height={40}
-                    width={40}
-                    className="transition-all rounded-md hover:bg-primary-300 hover:text-slate-800 hover:shadow-xl p-1 lg:p-2 h-[32px] w-[32px] lg:h-[40px] lg:w-[40px]  xl:h-[48px] xl:w-[48px] "
-                  />
-                </span>
-              </div>
-            </div>
-          )}
+        <Image
+          alt=""
+          src={project?.img ? project.img : "/pp.webp"}
+          width={1800}
+          height={600}
+          quality={100}
+          className=" aspect-[3/1] w-full object-cover"
+          priority={true}
+        ></Image>
 
-          <div className="relative flex w-full h-12 lg:h-24 justify-center items-center text-2xl xl:text-4xl 2xl:text-5xl">
-            <span className="font-medium text-center text-light">
-              {project && project.title}
-            </span>
+        <div className=" grid grid-flow-col 3xl:grid-cols-[300px_1fr] grid-rows-1 gap-x-6">
+          <div className="bg-slate-800 rounded-bl-md grid grid-cols-1 grid-rows-[minmax(150px,_1fr)_repeat(auto-fill,_minmax(100px,_1fr))] px-4 py-6 gap-6 ">
+            {githubInfo ? (
+              <div className="flex justify-center items-center w-full h-full bg-white text-black ">
+                {githubInfo.name}
+              </div>
+            ) : (
+              <div></div>
+            )}
+            {commitsInfo ? (
+              Object.keys(commitsInfo).map((key, index) => {
+                if (index > 11) return;
+                return (
+                  <div
+                    key={index}
+                    className="flex justify-center items-center w-full h-full bg-primary-500 text-white rounded-md "
+                  >
+                    commit: {commitsInfo[key].commit.message}
+                  </div>
+                );
+              })
+            ) : (
+              <div>error</div>
+            )}
           </div>
-
-          <p className="w-11/12 lg:w-10/12 pb-4 text-left text-light text-base leading-normal opacity-70  xl:text-xl 2xl:text-2xl">
-            {project && project.body}
-          </p>
+          <div>b</div>
         </div>
       </motion.div>
     </AnimatePresence>
