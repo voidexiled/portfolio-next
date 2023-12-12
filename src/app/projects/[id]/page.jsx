@@ -102,7 +102,10 @@ export default function Project() {
                     key={index}
                     className="flex justify-center items-center w-full h-full bg-primary-500 text-white rounded-md "
                   >
-                    commit: {commitsInfo[key].commit.message}
+                    commit:{" "}
+                    {commitsInfo[key].commit.message
+                      ? commitsInfo[key].commit.message
+                      : "no message"}
                   </div>
                 );
               })
