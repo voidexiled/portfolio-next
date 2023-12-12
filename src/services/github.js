@@ -1,14 +1,6 @@
-const token =
-  "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";
-
 export const getRepository = async (repository) => {
   const response = await fetch(
-    `https://api.github.com/repos/voidexiled/${repository}`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
+    `https://api.github.com/repos/voidexiled/${repository}`
   ).then((res) => res.json());
   console.warn(response);
   return response;
@@ -16,12 +8,7 @@ export const getRepository = async (repository) => {
 
 export const getCommitsFromRepository = async (repository) => {
   const response = await fetch(
-    `https://api.github.com/repos/voidexiled/${repository}/commits`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
+    `https://api.github.com/repos/voidexiled/${repository}/commits`
   )
     .then((res) => res.json())
     .catch((err) => {
