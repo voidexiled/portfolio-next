@@ -97,15 +97,16 @@ export default function Project() {
             {commitsInfo ? (
               Object.keys(commitsInfo).map((key, index) => {
                 if (index > 11) return;
+                console.log(commitsInfo[key]);
                 return (
                   <div
                     key={index}
                     className="flex justify-center items-center w-full h-full bg-primary-500 text-white rounded-md "
                   >
                     commit:{" "}
-                    {commitsInfo[key].commit.message
-                      ? commitsInfo[key].commit.message
-                      : "no message"}
+                    {/* {commitsInfo[key].commit.message
+                        ? commitsInfo[key].commit.message
+                        : "no message"} */}
                   </div>
                 );
               })
