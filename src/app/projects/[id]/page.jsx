@@ -12,13 +12,25 @@ import { IconLink } from "@tabler/icons-react";
 import { IconExternalLink } from "@tabler/icons-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { getCommitsFromRepository, getRepository } from "@/services/github";
-
+import {
+  getCommitsFromRepository,
+  getDeploymentsFromRepository,
+  getRepository,
+} from "@/services/github";
+import useSelectedCommit from "@/hooks/commits";
+import ProjectImage from "@/components/project/header/ProjectImage";
+import CommitList from "@/components/project/body/CommitList";
+import Commit from "@/components/project/body/Commit";
+import SkeletonCommitList from "@/components/project/body/skeleton/SkeletonCommitList";
+import GithubInfo from "@/components/project/body/GithubInfo";
 export default function Project() {
   const params = useParams();
   const [project, setProject] = useState(null);
-  const [githubInfo, setGithubInfo] = useState(null);
+  const [repoInfo, setGithubInfo] = useState(null);
   const [commitsInfo, setCommitsInfo] = useState(null);
+
+  const { selectedCommit, updateSelectedCommit, clearSelectedCommit } =
+    useSelectedCommit();
 
   const id = params.id;
   useEffect(() => {
@@ -54,69 +66,41 @@ export default function Project() {
     }
   }, [project]);
 
-  const onClickNotify = (msg) => {
-    toast(msg, {
-      position: "top-center",
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      id: "clipboard",
-    });
-  };
   return (
     <AnimatePresence>
-      <motion.div
+      <div
         className="relative mx-auto w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1440px] rounded-md grid 3xl:grid-rows-[480px_minmax(600px,_1fr)]  overflow-hidden gap-y-6"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0 }}
+        // initial={{ opacity: 0, scale: 0 }}
+        // animate={{ opacity: 1, scale: 1 }}
+        // exit={{ opacity: 0, scale: 0 }}
       >
-        <Image
-          alt=""
-          src={project?.img ? project.img : "/pp.webp"}
-          width={1800}
-          height={600}
-          quality={100}
-          className=" aspect-[3/1] w-full object-cover"
-          priority={true}
-        ></Image>
+        <ProjectImage src={project?.img} alt="" />
 
-        <div className=" grid grid-flow-col 3xl:grid-cols-[300px_1fr] grid-rows-1 gap-x-6">
-          <div className="bg-slate-800 rounded-bl-md grid grid-cols-1 grid-rows-[minmax(150px,_1fr)_repeat(auto-fill,_minmax(100px,_1fr))] px-4 py-6 gap-6 ">
-            {githubInfo ? (
-              <div className="flex justify-center items-center w-full h-full bg-white text-black ">
-                {githubInfo.name}
-              </div>
-            ) : (
-              <div></div>
-            )}
-            {commitsInfo ? (
-              Object.keys(commitsInfo).map((key, index) => {
-                if (index > 11) return;
-                console.log(commitsInfo[key]);
-                return (
-                  <div
-                    key={index}
-                    className="flex justify-center items-center w-full h-full bg-primary-500 text-white rounded-md "
-                  >
-                    commit:{" "}
-                    {/* {commitsInfo[key].commit.message
-                        ? commitsInfo[key].commit.message
-                        : "no message"} */}
-                  </div>
-                );
-              })
+        <div className=" grid grid-flow-col 3xl:grid-cols-[300px_1fr] grid-rows-1 gap-x-6 ">
+          <Suspense fallback={<SkeletonCommitList></SkeletonCommitList>}>
+            <CommitList>
+              {repoInfo && (
+                <GithubInfo
+                  repoInfo={repoInfo}
+                  commitsInfo={commitsInfo}
+                  project={project}
+                />
+              )}
+              {commitsInfo &&
+                Object.values(commitsInfo).map((commit, index) => (
+                  <Commit key={index} commit={commit} color={project.color} />
+                ))}
+            </CommitList>
+          </Suspense>
+          <section>
+            {selectedCommit ? (
+              <div>{selectedCommit.sha}</div>
             ) : (
               <div>error</div>
             )}
-          </div>
-          <div>b</div>
+          </section>
         </div>
-      </motion.div>
+      </div>
     </AnimatePresence>
   );
 }
