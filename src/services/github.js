@@ -6,7 +6,7 @@ export const getRepository = async (repository) => {
     `https://api.github.com/repos/voidexiled/${repository}`,
     {
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     }
   ).then((res) => res.json());
@@ -19,7 +19,7 @@ export const getCommitsFromRepository = async (repository) => {
     `https://api.github.com/repos/voidexiled/${repository}/commits`,
     {
       headers: {
-        Authorization: `token ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     }
   )
