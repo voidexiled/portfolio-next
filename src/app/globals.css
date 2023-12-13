@@ -114,20 +114,20 @@ adding to .navbar background when scroll position is > 100px
 
 .loading-skeleton {
   background: linear-gradient(90deg ,rgba(81, 81, 81, 0.82) 0%, rgba(61, 61, 61, 0.82) 50%, rgba(81, 81, 81, 0.82) 100%);
-  background-size: 300%;
-  background-position: -100%;
+  opacity: 0;
   animation: loading 2s ease-in-out both infinite;
 
 }
 
 @keyframes loading {
   0% {
-    background-position: -100%;
+    opacity: 0;
   }
   50% {
-    background-position: 0%;
+    opacity: 1;
   }
   100% {
-    background-position: 100%;
+    opacity: 0;
   }
 }
+
