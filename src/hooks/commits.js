@@ -13,7 +13,7 @@ const useSelectedCommit = () => {
   const updateSelectedCommit = (newCommit) => {
     setSelectedCommit(newCommit);
     localStorage.setItem("selectedCommit", JSON.stringify(newCommit));
-    //console.log(localStorage.getItem("selectedCommit").toString());
+    console.log(localStorage.getItem("selectedCommit").toString());
   };
 
   const clearSelectedCommit = () => {
