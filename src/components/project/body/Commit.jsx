@@ -1,6 +1,6 @@
 import useSelectedCommit from "@/hooks/commits";
 
-const Commit = ({ commit, color }) => {
+const Commit = ({ commit, color, key }) => {
   const { updateSelectedCommit } = useSelectedCommit();
   const { html_url, sha } = commit;
   const { message } = commit.commit;
@@ -8,7 +8,7 @@ const Commit = ({ commit, color }) => {
 
   return (
     <div
-      className="group grid grid-flow-row grid-rows-[20px,_1fr,_20px] w-full min-h-[100px] bg-background-800/10 border border-white/50 text-white rounded-md text-sm p-2 shadow-[0px_0px_12px_1px_rgba(0,0,0,0.12)] cursor-pointer transition-all hover:bg-background-800/25 hover:scale-[1.05] hover:shadow-[0px_0px_6px_2px_rgba(0,0,0,0.20)] hover:border-white/70 "
+      className="group grid grid-flow-row grid-rows-[20px,_1fr,_20px] w-full min-h-[100px] bg-background-800/10 border border-white/50 text-white rounded-md text-sm p-2 shadow-[0px_0px_12px_1px_rgba(0,0,0,0.12)] cursor-pointer transition-all hover:scale-[1.05] hover:shadow-[0px_0px_6px_2px_rgba(0,0,0,0.20)] hover:border-white/70 hover:bg-[linear-gradient(328deg,_rgba(121,121,121,0.38)_0%,_rgba(121,121,121,0.05)_32%,_rgba(81,_81,_81,_0.0)_100%)]  "
       onClick={() => {
         updateSelectedCommit(commit);
       }}

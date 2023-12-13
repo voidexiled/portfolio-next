@@ -30,13 +30,17 @@ const GithubInfo = ({ repoInfo, commitsInfo, project }) => {
         /<span className="group-hover:text-[#d1d1d1]">{name}</span>
       </a>
       <p>
-        <a
-          className="text-base hover:underline underline-offset-2"
-          style={{ textDecorationColor: color }}
-          href={homepage}
-        >
-          Visit homepage
-        </a>
+        {homepage ? (
+          <a
+            className="text-base hover:underline underline-offset-2 cursor-pointer"
+            style={{ textDecorationColor: color }}
+            href={homepage}
+          >
+            Visit homepage
+          </a>
+        ) : (
+          <span className="text-base line-through">No homepage</span>
+        )}
       </p>
       <p className="font-light text-white/80 text-sm">
         <a href={commits_url} className="hover:underline underline-offset-2">

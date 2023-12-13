@@ -74,7 +74,10 @@ export default function Project() {
         // animate={{ opacity: 1, scale: 1 }}
         // exit={{ opacity: 0, scale: 0 }}
       >
-        <ProjectImage src={project?.img} alt="" />
+        {project && (
+          <ProjectImage src={project.img} alt="a" />
+        )}
+        
 
         <div className=" grid grid-flow-col 3xl:grid-cols-[300px_1fr] grid-rows-1 gap-x-6 ">
           <Suspense fallback={<SkeletonCommitList></SkeletonCommitList>}>
