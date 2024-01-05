@@ -28,9 +28,9 @@ const nunito_sans = Nunito_Sans({
 export default function Footer() {
   return (
     <footer
-      className={`${nunito_sans.className} mx-auto  w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] flex flex-col gap-y-2 lg:gap-y-0 xl:flex-row justify-between items-center text-center opacity-80 mt-auto py-4 font-nunito-sans text-[18px] p-4`}
+      className={`${nunito_sans.className} mx-auto  w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] flex flex-col gap-y-2 lg:gap-y-0 2xl:flex-row justify-between items-center text-center opacity-80 mt-auto py-4 font-nunito-sans text-[18px] p-4`}
     >
-      <ul className="flex flex-row gap-x-6 justify-between items-center xl:opacity-0">
+      <ul className="flex flex-row gap-x-6 justify-between items-center 2xl:opacity-0">
         <li>
           <a href="https://github.com/voidexiled" title="Github link">
             <motion.img
@@ -91,7 +91,7 @@ export default function Footer() {
           Jesus Jalomo
         </motion.a>
       </span>
-      <ul className="hidden xl:flex xl:visible xl:gap-x-6 xl:justify-between lg:items-center">
+      <ul className="hidden 2xl:flex 2xl:visible 2xl:gap-x-6 2xl:justify-between xl:items-center">
         <li>
           <a
             href="https://github.com/voidexiled"

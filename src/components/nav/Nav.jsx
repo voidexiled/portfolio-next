@@ -46,7 +46,7 @@ export default function Nav() {
   };
 
   return (
-    <motion.header className="navbar sticky top-0 z-40 scroll ">
+    <motion.header className="navbar sticky top-0 z-40 scroll px-4 md:px-0 ">
       <motion.nav
         className={`relative min-h-[48px] text-[18px] non-selectable md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] mx-auto flex flex-row w-full h-12 justify-between items-center  md:py-9 ${nunito_sans.className} `}
       >

@@ -36,6 +36,7 @@ module.exports = {
         "nunito-sans": ["Nunito", "sans-serif"],
       },
       colors: {
+        transparent: "#ffffff00",
         background: {
           DEFAULT: "#023c40ff",
           50: "#f0f8faff",

@@ -29,7 +29,7 @@ export default function Home() {
     <AnimatePresence>
       <motion.article
         key="home"
-        className="wrapper mx-auto w-full md:w-[700px] xl:w-[800px] 2xl:w-[1200px] 3xl:w-[1500px] h-full flex flex-col xl:flex-row justify-center items-center lg:px-10 "
+        className="wrapper mx-auto w-full md:w-[700px] xl:w-[900px] 2xl:w-[1200px] 3xl:w-[1500px] h-full flex flex-col xl:flex-row justify-center items-center lg:px-10 "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
