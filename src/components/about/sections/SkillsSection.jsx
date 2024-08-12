@@ -18,7 +18,7 @@ export default function SkillsSection() {
             alt="Nextjs logo"
             src="/nextjs.svg"
             className=""
-          ></Image>
+          />
         </Skill>
         <Skill id="react" delay={0.05 * 1.5 * 1}>
           <Image
@@ -27,7 +27,7 @@ export default function SkillsSection() {
             alt="React logo"
             src="/react.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="mongodb" delay={0.05 * 1.5 * 2}>
           <Image
@@ -36,7 +36,7 @@ export default function SkillsSection() {
             alt="MongoDB logo"
             src="/mongodb.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="express" delay={0.05 * 1.5 * 3}>
           <Image
@@ -45,7 +45,7 @@ export default function SkillsSection() {
             alt="Express logo"
             src="/express.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="tailwind" delay={0.05 * 1.5 * 4}>
           <Image
@@ -54,7 +54,7 @@ export default function SkillsSection() {
             alt="Tailwind logo"
             src="/tailwind.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="nodejs" delay={0.05 * 1.5 * 5}>
           <Image
@@ -63,7 +63,7 @@ export default function SkillsSection() {
             alt="Nodejs logo"
             src="/nodejs.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="html" delay={0.05 * 1.5 * 6}>
           <Image
@@ -72,7 +72,7 @@ export default function SkillsSection() {
             alt="HTML logo"
             src="/html.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="javascript" delay={0.05 * 1.5 * 7}>
           <Image
@@ -81,7 +81,7 @@ export default function SkillsSection() {
             alt="Javascript logo"
             src="/javascript.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="git" delay={0.05 * 1.5 * 8}>
           <Image
@@ -90,7 +90,7 @@ export default function SkillsSection() {
             alt="Git logo"
             src="/git.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
         <Skill id="python" delay={0.05 * 1.5 * 9}>
           <Image
@@ -99,7 +99,7 @@ export default function SkillsSection() {
             alt="Python logo"
             src="/python.svg"
             className="w-14 h-14 lg:w-20 lg:h-20"
-          ></Image>
+          />
         </Skill>
       </div>
     </section>

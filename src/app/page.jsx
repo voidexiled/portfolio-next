@@ -10,7 +10,7 @@ export default function Home() {
       strings: [
         "I'm a computer systems engineering student.",
         "I'm 21 yo",
-        "I'm currently learning NextJs14, Astro, Vit, Angular17 and React",
+        "I'm currently learning NextJs14, Astro and React",
       ],
       typeSpeed: 50,
       backSpeed: 25,
@@ -43,7 +43,7 @@ export default function Home() {
             <span
               id="typewriter"
               className="subtitle  text-light leading-snug break-words "
-            ></span>
+            />
           </div>
         </section>
         <motion.section
@@ -61,7 +61,7 @@ export default function Home() {
             className="rounded-[50%] border-2"
             title="Jesus Jalomo profile picture"
             alt="Jesus Jalomo profile picture"
-          ></Image>
+          />
         </motion.section>
       </motion.article>
     </AnimatePresence>

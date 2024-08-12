@@ -18,13 +18,15 @@ export default function ProjectCard({
   technologies,
   shortBody,
   href,
+  deployedUrl,
 }) {
   return (
-    <Link href={href} className=" relative group">
+    // <Link className="relative group">
+    <Link href={deployedUrl} className=" relative group">
       <div className="opacity-0 z-10 justify-center items-center transition-all absolute bottom-0 left-0 w-full group-hover:opacity-100">
         <span
           style={{
-            backgroundColor: color + "21",
+            backgroundColor: `${color}21`,
           }}
           className="px-3 rounded-md group-hover:w-full text-[15px]"
         >
@@ -48,7 +50,7 @@ export default function ProjectCard({
             width={600}
             height={320}
             quality={90}
-            alt={title + " preview image"}
+            alt={`${title} preview image`}
             className="rounded-t-lg transition-all w-full object-top h-[300px] object-cover"
           />
         </div>

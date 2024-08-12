@@ -14,11 +14,13 @@ export const techs = {
   HTML: "HTML",
   CSS: "CSS",
   MYSQL: "MySql",
+  STRIPE: "Stripe",
 };
 
 export const projects = [
   {
     id: 1,
+    available: true,
     img: "/1.webp",
     title: "Void Pokedex",
     shortBody: "Clon de Pokedex con API que presenta un diseño creativo.",
@@ -39,12 +41,13 @@ export const projects = [
   },
   {
     id: 2,
-    img: "/2.webp",
-    title: "Lottery Utilities",
+    available: true,
+    img: "/tablasloteriamxonline.png",
+    title: "Generador Tablas Loteria MX",
     shortBody:
-      "Aplicacion web para la generacion de PDF's con tablas de loteria listas para recortar.",
+      "Aplicacion web para la generacion de PDF's con tablas de loteria.",
     body: "Esta aplicacion web fue desarrollada para facilitar el proceso de generacion de tablas de loteria. Utilizando Vite, React y Tailwind, esta aplicacion web permite generar tablas de loteria con la posiblidad de generar con distintos tipos de personalizaciones. Ademas, esta aplicacion web permite editar individualmente cada una de las tablas generadas y también generar un PDF con todas las tablas de loteria generadas.",
-    color: "#3447B3",
+    color: "#7f60be",
     technologies: [
       techs.VITE,
       techs.REACT,
@@ -52,12 +55,13 @@ export const projects = [
       techs.TYPESCRIPT,
       techs.NODEJS,
     ],
-    repo_name: "lottery-utilities",
-    repoURL: "https://github.com/voidexiled/lottery-utilities",
-    deployedUrl: "https://lotteryutilities.vercel.app/",
+    repo_name: "LotteryUtilities.Online",
+    repoURL: "https://github.com/voidexiled/LotteryUtilities.Online",
+    deployedUrl: "https://tablasloteriamx.online/",
   },
   {
     id: 3,
+    available: false,
     img: "/3.webp",
     title: "Spotify",
     shortBody: "Futuro clon de Spotify desarrollado con tecnologías modernas.",
@@ -77,6 +81,7 @@ export const projects = [
   },
   {
     id: 4,
+    available: false,
     img: "/4.webp",
     title: "Portfolio",
     shortBody:
@@ -87,5 +92,26 @@ export const projects = [
     repo_name: "portfolio-next",
     repoURL: "https://github.com/voidexiled/portfolio-next",
     deployedUrl: "https://jesusjalomo.vercel.app/",
+  },
+  {
+    id: 5,
+    available: true,
+    img: "/tablasloteriamx.png",
+    title: "Tablas Loteria MX",
+    shortBody:
+      "Pagina web tipo landing para vender tablas de loteria.",
+    body: "Esta página web fue desarrollada como mediador durante el proceso de contacto de cliente a vendedor. Utilizando Astro, React y Tailwind, esta página web permite contactar conmigo para comprar tablas de loteria.",
+    color: "#3447B3",
+    technologies: [
+      techs.VITE,
+      techs.REACT,
+      techs.TAILWIND,
+      techs.TYPESCRIPT,
+      techs.NODEJS,
+      techs.STRIPE
+    ],
+    repo_name: "LotteryUtilities.Online",
+    repoURL: "https://github.com/voidexiled/lottery-online-store",
+    deployedUrl: "https://tablasloteriamx.com/",
   },
 ];

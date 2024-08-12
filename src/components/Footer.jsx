@@ -63,7 +63,7 @@ export default function Footer() {
 
         <motion.li>
           <a
-            href="mailto:jalomo.chavez18@outlook.com?subject=PortfolioMessage"
+            href="mailto:jalomo.chavez18@outlook.com?subject=Te contacto através de jesusjalomo.vercel.app"
             title="Outlook mail"
           >
             <motion.img
@@ -86,7 +86,7 @@ export default function Footer() {
           className="opacity-100 text-light-400"
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
-          title="Github link"
+          title="Github link" rel="noreferrer"
         >
           Jesus Jalomo
         </motion.a>
@@ -96,7 +96,7 @@ export default function Footer() {
           <a
             href="https://github.com/voidexiled"
             target="_blank"
-            title="Github link"
+            title="Github link" rel="noreferrer"
           >
             <motion.img
               src="/github.svg"
@@ -113,7 +113,7 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/francisco-jesus-jalomo-chavez-01218b243"
             target="_blank"
-            title="Linkedin link"
+            title="Linkedin link" rel="noreferrer"
           >
             <motion.img
               src="/linkedin.svg"
@@ -128,7 +128,7 @@ export default function Footer() {
         </li>
         <li>
           <a
-            href="mailto:jalomo.chavez18@outlook.com?subject=PortfolioMessage"
+            href="mailto:jalomo.chavez18@outlook.com?subject=Te contacto através de jesusjalomo.vercel.app"
             title="Outlook mail"
           >
             <motion.img

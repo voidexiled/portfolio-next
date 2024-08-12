@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>
-          Francisco Jesus Jalomo Chavez Portfolio - Full stack web developer{" "}
+          Francisco Jesus Jalomo Chavez Portfolio - Full stack web developer
         </title>
         <meta charSet="utf-8" />
         <meta
@@ -35,11 +35,10 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={
-          inter.className +
-          "before:contents before:-z-10 before:fixed  before:top-0 before:left-0 before:w-screen before:min-h-screen before:bg-gradient-to-tr before:from-background-700 before:via-background-800 before:to-background-900 before:bg-no-repeat  before:bg-cover min-h-screen w-full text-light text-xs md:text-md lg:text-lg relative grid max-w-[100%] max-w-screen "
+          `${inter.className}before:contents before:-z-10 before:fixed  before:top-0 before:left-0 before:w-screen before:min-h-screen before:bg-gradient-to-tr before:from-background-700 before:via-background-800 before:to-background-900 before:bg-no-repeat  before:bg-cover min-h-screen w-full text-light text-xs md:text-md lg:text-lg relative grid max-w-[100%] max-w-screen `
         }
       >
-        <Nav></Nav>
+        <Nav />
         <main className="py-16 lg:py-[5rem] 2xl:py-[9rem]">
           <ToastContainer
             position="bottom-center"
@@ -55,7 +54,7 @@ export default function RootLayout({ children }) {
           />
           {children}
         </main>
-        <Footer></Footer>
+        <Footer />
         <Analytics />
       </body>
     </html>

@@ -16,15 +16,15 @@ export default function HeroSection() {
             <span className="text-secondary">
               Francisco Jesus Jalomo Chavez{" "}
               <span className="text-[rgba(255,255,255,0.82)]">from</span>{" "}
-              Tamaulipas, México.
+              Tampico, Tamaulipas, México.
             </span>
           </p>
           <p>
             Hi! {"I'm"} a{" "}
             <span className="text-secondary">
-              20-year-old Systems Engineering student
+              21-year-old Systems Engineering student
             </span>{" "}
-            in my 7th semester. My love for programming began in 2015 with video
+            in my 8th semester. My love for programming began in 2015 with video
             games and {"I've"} been{" "}
             <span className="text-secondary">self-learning</span> ever since.
             The 2020 pandemic gave me free time to further improve my skills.
