@@ -67,7 +67,9 @@ export default function Nav() {
           <motion.ul className="flex flex-row space-x-4  md:space-x-8  ">
             <motion.li
               className={`relative hover:text-secondary-400 transition-all ${
-                selected == DIRS.HOME ? selectedColorText : notSelectedColorText
+                selected === DIRS.HOME
+                  ? selectedColorText
+                  : notSelectedColorText
               }
                 `}
             >
@@ -77,9 +79,9 @@ export default function Nav() {
                   setSelected(DIRS.HOME);
                 }}
               >
-                Home
+                Inicio
               </Link>
-              {selected == DIRS.HOME ? (
+              {selected === DIRS.HOME ? (
                 <motion.div
                   layoutId="underline"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -90,7 +92,7 @@ export default function Nav() {
 
             <motion.li
               className={`relative hover:text-secondary-400 transition-all ${
-                selected == DIRS.PROJECTS
+                selected === DIRS.PROJECTS
                   ? selectedColorText
                   : notSelectedColorText
               }
@@ -102,9 +104,9 @@ export default function Nav() {
                 }}
                 href="/projects"
               >
-                Projects
+                Proyectos
               </Link>
-              {selected == DIRS.PROJECTS ? (
+              {selected === DIRS.PROJECTS ? (
                 <motion.div
                   layoutId="underline"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -114,7 +116,7 @@ export default function Nav() {
             </motion.li>
             <motion.li
               className={`relative hover:text-secondary-400 transition-all ${
-                selected == DIRS.ABOUT
+                selected === DIRS.ABOUT
                   ? selectedColorText
                   : notSelectedColorText
               }
@@ -126,15 +128,23 @@ export default function Nav() {
                 }}
                 href={"/about"}
               >
-                About
+                Acerca de mi
               </Link>
-              {selected == DIRS.ABOUT ? (
+              {selected === DIRS.ABOUT ? (
                 <motion.div
                   layoutId="underline"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   className="absolute top-full left-0 w-full h-[3px] bg-secondary rounded-lg"
                 />
               ) : null}
+            </motion.li>
+            <motion.li className="relative hover:text-secondary-400 transition-all">
+              <Link
+                href={"/CV_Francisco_Jesus_Jalomo_Chavez.pdf"}
+                target="_blank"
+              >
+                CV
+              </Link>
             </motion.li>
           </motion.ul>
         </motion.div>
