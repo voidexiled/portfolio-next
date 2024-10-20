@@ -4,7 +4,7 @@ export default function ToolsSection() {
   return (
     <section className="skills flex flex-col mt-12 xl:max-w-[1500px]">
       <h1 className="mx-auto w-full align-middle text-center h-30 md:h-36  text-[26px]  py-6 text-secondary font-semibold">
-        Tools <span className="font-normal text-light">I use</span>
+        Herramientas <span className="font-normal text-light">que uso</span>
       </h1>
       <div className="flex flex-row flex-wrap w-full justify-center xl:px-10 gap-x-4 gap-y-4 md:gap-x-6 md:gap-y-6">
         <Skill id="vscode" delay={0.05}>

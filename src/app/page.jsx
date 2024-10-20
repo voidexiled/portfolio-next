@@ -8,9 +8,9 @@ export default function Home() {
   useEffect(() => {
     const options = {
       strings: [
-        "I'm a computer systems engineering student.",
-        "I'm 21 yo",
-        "I'm currently learning NextJs14, Astro and React",
+        "Soy estudiante de Ingeniería en Sistemas Computacionales",
+        "Tengo 21 años",
+        "Actualmente estoy aprendiendo NextJs, Astro, React y Tailwind",
       ],
       typeSpeed: 50,
       backSpeed: 25,
@@ -37,7 +37,7 @@ export default function Home() {
       >
         <section className="container flex flex-col h-[140px] items-center">
           <span className="title leading-snug text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-left whitespace-nowrap">
-            Hey, {"i'm"} Jesus Jalomo
+            Qué tal, soy Jesus Jalomo
           </span>
           <div className="subtitle text-primary leading-snug text-lg lg:text-lg xl:text-xl text-left max-w-[340px] md:max-w-[800px]">
             <span

@@ -8,7 +8,8 @@ export default function SkillsSection() {
   return (
     <section className="skills flex flex-col mt-12 xl:max-w-[1500px] ">
       <h1 className="mx-auto w-full align-middle text-center h-30 md:h-36 font-normal text-[26px] py-6 ">
-        Learned <span className="text-secondary font-semibold ">Skillset</span>
+        <span className="text-secondary font-semibold ">Habilidades </span>
+        aprendidas
       </h1>
       <div className="flex flex-row flex-wrap w-full justify-center xl:px-10 gap-x-4 gap-y-4 md:gap-x-6 md:gap-y-6">
         <Skill id="nextjs" delay={0.05}>
