@@ -79,14 +79,15 @@ export default function Footer() {
         </motion.li>
       </ul>
       <span className="text-light">
-        Designed with ♥ & By{" "}
+        Diseñado con ♥ por{" "}
         <motion.a
           href="http://github.com/voidexiled"
           target="_blank"
-          className="opacity-100 text-light-400"
+          className="opacity-100 text-light-400 underline"
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
-          title="Github link" rel="noreferrer"
+          title="Github link"
+          rel="noreferrer"
         >
           Jesus Jalomo
         </motion.a>
@@ -96,7 +97,8 @@ export default function Footer() {
           <a
             href="https://github.com/voidexiled"
             target="_blank"
-            title="Github link" rel="noreferrer"
+            title="Github link"
+            rel="noreferrer"
           >
             <motion.img
               src="/github.svg"
@@ -113,7 +115,8 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/francisco-jesus-jalomo-chavez-01218b243"
             target="_blank"
-            title="Linkedin link" rel="noreferrer"
+            title="Linkedin link"
+            rel="noreferrer"
           >
             <motion.img
               src="/linkedin.svg"

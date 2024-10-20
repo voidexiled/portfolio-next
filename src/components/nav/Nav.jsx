@@ -59,7 +59,7 @@ export default function Nav() {
                 //handleThemeSwitch();
               }}
             >
-              Hi 😁
+              Hola! 😁
             </motion.h1>
           </Link>
         </motion.div>

@@ -22,15 +22,16 @@ export default function HeroSection() {
             </span>
           </p>
           <p>
-            Hola! soy un
+            Hola! soy un{" "}
             <span className="text-secondary">
               estudiante de Ingenieria en Sistemas Computacionales y tengo 21
               años
             </span>{" "}
             y estoy en 9no semestre. Mi amor por la programación comenzó en 2015
-            con videojuegos y desde entonces he sido
+            con videojuegos y desde entonces he sido{" "}
             <span className="text-secondary">autodidacta</span>. La pandemia del
             2020 me dio mucho tiempo libre para mejorar mis habilidades.
+            <br />
             <span className="text-secondary-400">
               {" "}
               Emocionado de seguir aprendiendo y creciendo!.
